@@ -1,0 +1,160 @@
+@import 'fonts.scss';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper{
+  overflow: hidden;
+  min-width: 1100px;
+  height: 649px;
+}
+.first-section{
+  width: 100%;
+  height: 649px;
+  background: url("../img/first/video-bg.png") top no-repeat;
+  background-size: 1100px;
+  &::before{
+    content: '';
+    height: 649px;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/first/texture.png") center center no-repeat;
+    background-size:1100px;
+  }
+  &:after{
+    content: "";
+    display: block;
+    height: -56pxpx;
+  }
+}
+.container{
+  width: 1100px;
+
+  margin: 0 auto;
+}
+.navigation{
+  padding-top: 12px ;
+  width: 945px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.navigation__logo{
+
+}
+.navigation__block{
+  margin-left:auto;
+
+}
+.navigation__list{
+  color: #ffffff;
+  margin-top: 22px;
+  display: flex;
+  list-style-type:disc;
+}
+.navigation__elem{
+  list-style-type:disc;
+  margin-left: 12px;
+  margin-right: 19px;
+  &:last-child{
+    margin-right: 15px;
+  }
+  &:first-child{
+    list-style-type:none;
+  }
+}
+.navigation__link{
+  display: inline-block;
+  padding-left: 4px;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.navigation__button{
+  margin-right: 2px;
+  margin-top: 16px;
+}
+.navigation__submit{
+  box-sizing: border-box;
+  width: 97px;
+  height: 35px;
+  color: #ffffff;
+  font-family: Ubuntu,sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #e45028;
+  background-color: #e45028;
+  border-radius: 6px;
+  transition: 0.4s;
+}
+.burger{
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+
+}
+.burger__img{
+  width: 414px;
+  height: 420px;
+  background: url("../img/first/burger.png") center center no-repeat;
+  position: relative;
+  top: -12px;
+  right: 8px;
+
+  &:after{
+    width: 486px;
+    height: 420px;
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: -54px;
+    right: 66px;
+    bottom: 0;
+    background: url("../img/first/drops.png") center center no-repeat;
+  }
+}
+.burger__text{
+  width: 405px;
+  height: 213px;
+  padding-left: 6px;
+  margin-top: 109px;
+}
+.burger__header{
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: 72px;
+  font-weight: 500;
+}
+.burger__description{
+  color: #ffffff;
+  font-family: 'Lifehack';
+  text-transform: lowercase;
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-top: 14px;
+  letter-spacing: -1.63px;
+}
+.arrow-scroll{
+  margin-top: -56px;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+

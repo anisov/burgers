@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'Ubuntu';
   src: url('../fonts/Ubuntu/ubuntu-light.woff2') format('woff2'),
-  url('../fonts/Ubuntu/ubuntu-light.woff') format('woff');
+  url('../../fonts/Ubuntu/ubuntu-light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 
@@ -33,7 +33,7 @@
 @font-face {
   font-family: 'Ubuntu';
   src: url('../fonts/Ubuntu/ubuntu-medium.woff2') format('woff2'),
-  url('../fonts/Ubuntu/ubuntu-medium.woff') format('woff');
+  url('../../fonts/Ubuntu/ubuntu-medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }

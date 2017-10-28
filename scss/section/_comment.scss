@@ -1,0 +1,84 @@
+.comment{
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment__post{
+  width: 25%;
+  height: 50vh;
+  position: relative;
+  &:hover .comment__name{
+    transition: opacity .5s;
+    opacity: 0.95;
+    left: 10%;
+  }
+  &:hover .comment__text {
+    transition: opacity .5s;
+    opacity: 0.95;
+    left: 10%;
+  }
+}
+.comment__img{
+  position: absolute;
+  width: 100%;
+  min-height: 325px;
+  height: 50vh;
+  object-fit: cover;
+  filter:grayscale(1)
+}
+
+.comment__name{
+  opacity: 0;
+  width: 222px;
+  position: absolute;
+  top: 15%;
+  left: -9999px;
+  color: #ffffff;
+  font-family: Gagalin;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+
+}
+.comment__text{
+  opacity: 0;
+  width: 222px;
+  top: 30%;
+  left: -9999px;
+  position: absolute;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+
+}
+/*
+.comment__post:hover .comment__name .comment__text {
+  transition: opacity .5s;
+  opacity: 0.95;
+  left: 10%;
+
+}
+*/
+.comment__post:hover .comment__bg-dark{
+  transition: background-color .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 50vh;
+}
+.comment__button{
+  margin-top: 15% ;
+  width: 113px;
+  height: 38px;
+  background-color: #2f3234;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid #2f3234;
+}

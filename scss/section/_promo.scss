@@ -1,0 +1,79 @@
+.promo{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/promo/video-bg.png") top no-repeat;
+  background-size: cover;
+  &::after{
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url("../img/promo/texture.png") center center no-repeat;
+    background-size: cover;
+  }
+}
+.promo__burger{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.promo__img{
+  width: 414px;
+  height: 420px;
+  background: url("../img/promo/burger.png") center center no-repeat;
+  position: relative;
+  top: -12px;
+  right: 8px;
+
+  &:after{
+    width: 486px;
+    height: 420px;
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: -54px;
+    right: 66px;
+    bottom: 0;
+    background: url("../img/promo/drops.png") center center no-repeat;
+  }
+}
+.promo__text{
+  width: 405px;
+  padding-top: 34px;
+  padding-left: 6px;
+}
+.promo__header{
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: 72px;
+  font-weight: 500;
+}
+.promo__description{
+  color: #ffffff;
+  font-family: 'Lifehack';
+  text-transform: lowercase;
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-top: 14px;
+  letter-spacing: -1.63px;
+}
+.arrow-scroll{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+.arrow-scroll__img{
+  height: 14px;
+  display: block;
+  background: url("../img/promo/arrow-scroll.svg") center center no-repeat;
+}

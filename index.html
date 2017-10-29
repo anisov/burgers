@@ -11,40 +11,40 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="maincontent">
-        <section class="section section__first">
+    <main class="maincontent">
+        <header class="header">
+            <nav class="navigation">
+                <div class="navigation__logo"><a class="logo" href="#"><img class="logo__img" src="img/logo/logo.png" alt="Логотип"></a></div>
+                <div class="navigation__block">
+                    <ul class="navigation__list">
+                        <li class="navigation__elem"><a href="" class="navigation__link">О нас</a></li>
+                        <li class="navigation__elem"><a href="" class="navigation__link">Бургеры</a></li>
+                        <li class="navigation__elem"><a href="" class="navigation__link">Команда</a></li>
+                        <li class="navigation__elem"><a href="" class="navigation__link">Меню</a></li>
+                        <li class="navigation__elem"><a href="" class="navigation__link">Отзывы</a></li>
+                        <li class="navigation__elem"><a href="" class="navigation__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="navigation__button"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+            </nav>
+        </header>
+        <section class="section promo">
             <div class="container">
-                <header class="header">
-                    <nav class="navigation">
-                        <div class="navigation__logo"><a class="logo" href="#"><img class="logo__img" src="img/logo/logo.png" alt="Логотип"></a></div>
-                        <div class="navigation__block">
-                            <ul class="navigation__list">
-                                <li class="navigation__elem"><a href="" class="navigation__link">О нас</a></li>
-                                <li class="navigation__elem"><a href="" class="navigation__link">Бургеры</a></li>
-                                <li class="navigation__elem"><a href="" class="navigation__link">Команда</a></li>
-                                <li class="navigation__elem"><a href="" class="navigation__link">Меню</a></li>
-                                <li class="navigation__elem"><a href="" class="navigation__link">Отзывы</a></li>
-                                <li class="navigation__elem"><a href="" class="navigation__link">Контакты</a></li>
-                            </ul>
-                        </div>
-                        <div class="navigation__button"><a class="order-link" href="" data-goto="6">Заказать</a></div>
-                    </nav>
-                </header>
-                <main class="burger">
-                    <div class="burger__content">
-                        <div class="burger__img"></div>
+                <div class="promo__burger">
+                    <div class="promo__content">
+                        <div class="promo__img"></div>
                     </div>
-                    <div class="burger__text">
-                        <div class="burger__header">
+                    <div class="promo__text">
+                        <div class="promo__header">
                             Мы делаем
                         </div>
-                        <div class="burger__description">
+                        <div class="promo__description">
                             Натуральные бургеры
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
-            <div class="arrow-scroll"><img class="arrow-scroll__img" src="img/first/arrow-scroll.png"></div>
+            <div class="arrow-scroll"><a href="" class="arrow-scroll__img"></a></div>
         </section>
             <aside class="aside-menu">
                 <nav class="aside-menu__nav">
@@ -60,18 +60,16 @@
                     </ul>
                 </nav>
             </aside>
-        <section class="section second-section">
+        <section class="section best">
             <div class="container">
-                <div class="second-block__header">
+                <div class="best__header">
                     <div class="title title-dark">
                         Мы лучшие
                     </div>
                 </div>
                 <div class="content">
                     <div class="content__box">
-                        <div class="content__img">
-                            <img src="img/second/meat.png" alt="мясо">
-                        </div>
+                        <div class="content__img content__img-first"></div>
                         <div class="content__title">
                             100% свежее мясо
                         </div>
@@ -80,9 +78,7 @@
                         </div>
                     </div>
                     <div class="content__box">
-                        <div class="content__img">
-                            <img src="img/second/hand.png" alt="мясо">
-                        </div>
+                        <div class="content__img content__img-second"></div>
                         <div class="content__title">
                             Ручная  сборка
                         </div>
@@ -91,9 +87,7 @@
                         </div>
                     </div>
                     <div class="content__box">
-                        <div class="content__img">
-                            <img src="img/second/natural.png" alt="мясо">
-                        </div>
+                        <div class="content__img content__img-third"></div>
                         <div class="content__title">
                             Натуральные иингредиенты
                         </div>
@@ -104,7 +98,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </main>
     <section class="section comment">
         <div class="comment__post">
             <div class="comment__bg">

@@ -1,0 +1,72 @@
+.order{
+  background: url("../img/order/order-bg.jpg") center center no-repeat;
+  background-size: cover;
+}
+.section-title{
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 64px;
+}
+.form__content{
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: baseline;
+
+
+}
+.form__row{
+  display: flex;
+}
+.form__title{
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 18px;
+}
+.form__label{
+  margin-right: 16px;
+  flex-grow: 1;
+  &--radio{
+    flex-grow: 0;
+  }
+}
+.form__input{
+  margin-right: 19px;
+  width: 100%;
+  height: 38px;
+  border: 1px solid #d1cfcb;
+  background-color: #ffffff;
+  border-radius: 6px;
+  &--comment{
+    width: 463px;
+    height: 112px;
+    border: 1px solid #d1cfcb;
+    background-color: #ffffff;
+  }
+  &--radio{
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+  }
+  &--checkbox{
+    width: 11px;
+    height: 9px;
+    background-color: #e45028;
+  }
+}
+.form__block{
+
+  margin-right: 20px;
+  flex: 1;
+}
+
+.order-button{
+  width: 100px;
+  height: 38px;
+  background-color: #e45028;
+}

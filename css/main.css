@@ -847,3 +847,87 @@ html, body {
   transition: fill .4s; }
   .footer__svg:hover {
     fill: #fff; }
+
+.order {
+  background: url("../img/order/order-bg.jpg") center center no-repeat;
+  background-size: cover; }
+
+.section-title {
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 64px; }
+
+.form__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+
+.form__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__title {
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 18px; }
+
+.form__label {
+  margin-right: 16px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+  .form__label--radio {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0; }
+
+.form__input {
+  margin-right: 19px;
+  width: 100%;
+  height: 38px;
+  border: 1px solid #d1cfcb;
+  background-color: #ffffff;
+  border-radius: 6px; }
+  .form__input--comment {
+    width: 463px;
+    height: 112px;
+    border: 1px solid #d1cfcb;
+    background-color: #ffffff; }
+  .form__input--radio {
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff; }
+  .form__input--checkbox {
+    width: 11px;
+    height: 9px;
+    background-color: #e45028; }
+
+.form__block {
+  margin-right: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.order-button {
+  width: 100px;
+  height: 38px;
+  background-color: #e45028; }

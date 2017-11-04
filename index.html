@@ -314,30 +314,36 @@
                             </div>
                             <div class="form__block">
                                 <div class="form__row">
-                                    <lable class="form__label">
+                                    <label class="form__label">
                                         <div class="form__title">Комментарии</div>
-                                        <input class="form__input form__input--comment"></input>
-                                    </lable>
-                                </div>
-                                <div class="form__row">
-                                    <lable class="form__label form__label--radio ">
-                                        <div class="form__title">Потребуется сдача</div>
-                                        <input type='radio'  value="yes" class="form__input form__input--radio">
-                                    </lable>
-                                    <lable class="form__label form__label--radio">
-                                        <div class="form__title">Оплата по карте</div>
-                                        <input type='radio'  value="no" class="form__input form__input--radio">
-                                    </lable>
-                                </div>
-                                <div class="form__row">
-                                    <label class="form__label ">
-                                        <div class="form__title">Не перезванивать</div>
-                                        <input type = 'checkbox' class="form__input form__input--checkbox">
+                                        <input class="form__input form__input--comment">
                                     </label>
                                 </div>
                                 <div class="form__row">
-                                    <button type="submit" class="order-button">Заказать</button>
-                                    <button type = 'clear' class="order-clear">Очистить </button>
+                                    <label class="form__label form__label--radio ">
+                                        <input type='radio'  name="money" value="yes" class="form__input form__input--radio">
+                                        <span class="form__radio-styled"></span>
+                                        <span class="form__title form__input--title">Потребуется сдача</span>
+                                    </label>
+                                    <label class="form__label form__label--radio">
+                                        <input type='radio' name="money" value="no" class="form__input form__input--radio">
+                                        <span class="form__radio-styled"></span>
+                                        <span class="form__title form__input--title">Оплата по карте</span>
+
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <label class="form__label form__label--checkbox">
+                                        <input type = 'checkbox' class="form__input form__input--checkbox">
+                                        <span class="form__checkbox-styled"></span>
+                                        <div class="form__title">Не перезванивать</div>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__buttons">
+                                        <button type="submit" class="order-button">Заказать</button>
+                                        <button type = 'clear' class="order-clear">Очистить </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

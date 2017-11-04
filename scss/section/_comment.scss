@@ -20,7 +20,7 @@
 .comment__img{
   position: absolute;
   width: 100%;
-  min-height: 325px;
+  min-height: rem(325px);
   height: 50vh;
   object-fit: cover;
   filter:grayscale(1)
@@ -28,26 +28,26 @@
 
 .comment__name{
   opacity: 0;
-  width: 222px;
+  width: rem(222px);
   position: absolute;
   top: 15%;
-  left: -9999px;
+  left: rem(-9999px);
   color: $white;
   font-family: Gagalin;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
-  line-height: 28px;
+  line-height: rem(28px);
 }
 .comment__text{
   opacity: 0;
-  width: 222px;
+  width: rem(222px);
   top: 30%;
-  left: -9999px;
+  left: rem(-9999px);
   position: absolute;
   color: #ffffff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  line-height: 24px;
+  line-height: rem(24px);
 }
 .comment__post:hover .comment__bg-dark{
   transition: background-color .5s;
@@ -57,21 +57,21 @@
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 50vh;
-  min-height: 325px;
+  min-height: rem(325px);
 }
 .comment__button{
   margin-top: 15% ;
-  width: 113px;
-  height: 38px;
+  width: rem(113px);
+  height: rem(38px);
   background-color: $dark;
   transition: background-color .5s;
   color: $white;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
-  line-height: 30px;
+  line-height: rem(30px);
   text-transform: uppercase;
-  border-radius: 5px;
-  border: 1px solid $dark;
+  border-radius: rem(5px);
+  border: rem(1px) solid $dark;
   &:hover {
     background-color: darken($dark, 10%);
   }

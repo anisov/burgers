@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left: 93px;
+  padding-left: rem(93px);
   position: absolute;
   right: 0;
   top: 0;
@@ -18,17 +18,17 @@
 
 }
 .team__title{
-  margin-top:200px;
-  width: 208px;
+  margin-top:rem(200px);
+  width: rem(208px);
   color: $yellow;
-  margin-bottom: 79px;
+  margin-bottom: rem(79px);
 }
 .team__accordion{
   display: flex;
   flex-direction: column ;
 }
 .team__member{
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 .team__information{
   height: 0;
@@ -43,28 +43,28 @@
 .team__img-member {
   object-fit: cover;
   border-radius: 50%;
-  width: 103px;
-  height: 100px;
+  width: rem(103px);
+  height: rem(100px);
 }
 .team__description{
-  margin-left: 4px;
+  margin-left: rem(4px);
 }
 .team__name{
   align-self: flex-end;
   color: $white;
   font-family: Gagalin;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
-  line-height: 28px;
-  margin-bottom: 11px;
-  margin-left: 6px;
+  line-height: rem(28px);
+  margin-bottom: rem(11px);
+  margin-left: rem(6px);
   &:before{
-    margin-right: 10px;
+    margin-right: rem(10px);
     content: '';
     display: inline-block;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 7px solid $yellow;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-top: rem(7px) solid $yellow;
     vertical-align: middle;
   }
   &--active{
@@ -75,20 +75,20 @@
   }
 }
 .team__position{
-  margin-top: -5px;
-  width: 208px;
+  margin-top: rem(-5px);
+  width: rem(208px);
   color: $white;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-weight: 700;
-  margin-left: 18px;
+  margin-left: rem(18px);
 }
 .team__work{
-  margin-top: 11px;
-  width: 208px;
+  margin-top: rem(11px);
+  width: rem(208px);
   color: $white;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  line-height: 24px;
-  margin-left: 18px;
+  line-height: rem(24px);
+  margin-left: rem(18px);
 }

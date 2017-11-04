@@ -16,9 +16,9 @@ html, body{
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem(1px);
+  height: rem(1px);
+  margin: rem(-1px);
   border: 0;
   padding: 0;
   white-space: nowrap;

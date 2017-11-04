@@ -1,7 +1,7 @@
 .aside-menu{
   position: fixed;
-  right: 54px;
-  top: 97px;
+  right: rem(54px);
+  top: rem(97px);
   z-index: 2;
 }
 .aside-menu__nav{
@@ -9,13 +9,13 @@
 }
 .aside-menu__elem{
   list-style-type:none;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 .aside-menu__link{
   display: block;
   position: relative;
-  height: 6px;
-  width: 6px;
+  height: rem(6px);
+  width: rem(6px);
   background-color: $white;
   border-radius: 50%;
 }
@@ -23,9 +23,9 @@
   &:after {
     display: block;
     content: '';
-    width: 14px;
-    height: 14px;
-    border: 1px solid $white;
+    width: rem(14px);
+    height: rem(14px);
+    border: rem(1px) solid $white;
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -36,9 +36,9 @@
 .aside-menu__link:hover{
   &:after {
     content: '';
-    width: 14px;
-    height: 14px;
-    border: 1px solid $white;
+    width: rem(14px);
+    height: rem(14px);
+    border: rem(1px) solid $white;
     border-radius: 50%;
     top: 50%;
     left: 50%;

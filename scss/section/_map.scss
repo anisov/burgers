@@ -9,13 +9,13 @@
 .footer{
   position: absolute;
   background: url("../img/map/footer-bg.jpg");
-  height: 60px;
+  height: rem(60px);
   bottom: 0;
   left: 0;
   width: 100%;
 }
 .footer__container{
-  width: 965px;
+  width: rem(965px);
   margin:0 auto;
   display: flex;
   height: 100%;
@@ -25,22 +25,22 @@
   height: 100%;
 }
 .footer__address {
-  padding-top: 4px;
+  padding-top: rem(4px);
   color: $white;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  line-height: 24px;
+  line-height: rem(24px);
 }
 .footer__tel{
-  font-size: 14px;
-  margin-top: 4px;
+  font-size: rem(14px);
+  margin-top: rem(4px);
   text-align: left;
   font-weight: 700;
 }
 .footer__svg-tel{
-  margin-right: 5px;
-  width: 12px;
-  height: 11px;
+  margin-right: rem(5px);
+  width: rem(12px);
+  height: rem(11px);
   fill: $orange;
 }
 .footer__tel-href{
@@ -63,17 +63,17 @@
   list-style-type: none;
   display: inline-block;
   font-size: 0;
-  margin-right: 25px;
+  margin-right: rem(25px);
 }
 .footer__icon{
-  font-size: 16px;
-  margin-left: 19px;
+  font-size: rem(16px);
+  margin-left: rem(19px);
   display: inline-block;
 }
 .footer__svg{
   fill: #5d5d5d;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   transition: fill .4s;
   &:hover{
     fill: $white;

@@ -1,17 +1,17 @@
 .wrapper{
   overflow: hidden;
-  min-width: 1100px;
+  min-width: rem(1100px);
   width: 100%;
 }
 
 .maincontent {
   height: 100%;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .container{
-  min-height: 650px;
-  width: 940px;
+  min-height: rem(650px);
+  width: rem(940px);
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -23,19 +23,19 @@
 .section {
   height: 100vh;
   background-color: rgba(0,0,0,0.31);
-  min-width: 945px;
-  min-height: 650px;
+  min-width: rem(945px);
+  min-height: rem(650px);
 }
 
 .order-link {
-  width: 97px;
-  height: 35px;
-  padding: 10px 16px;
-  border-radius: 5px;
+  width: rem(97px);
+  height: rem(35px);
+  padding: rem(10px) rem(16px);
+  border-radius: rem(5px);
   background-color: $orange;
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;
@@ -47,8 +47,8 @@
 .section-title{
   text-align: center;
   font-family: Gagalin;
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: 400;
-  line-height: 64px;
+  line-height: rem(64px);
   color: $yellow;
 }

@@ -1,12 +1,10 @@
+.section-map{
+  position: relative;
+}
 .map{
   background: url("../img/map/map-bg.png") center center no-repeat;
   background-size: cover;
-  // Style for "Layer 4"
   height: 100vh;
-
-}
-.section-map{
-  position: relative;
 }
 .footer{
   position: absolute;
@@ -15,7 +13,6 @@
   bottom: 0;
   left: 0;
   width: 100%;
-
 }
 .footer__container{
   width: 965px;
@@ -27,10 +24,9 @@
   width: 50%;
   height: 100%;
 }
-
 .footer__address {
   padding-top: 4px;
-  color: #ffffff;
+  color: $white;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -39,14 +35,17 @@
   font-size: 14px;
   margin-top: 4px;
   text-align: left;
-  color: #e45028;
   font-weight: 700;
 }
 .footer__svg-tel{
   margin-right: 5px;
   width: 12px;
   height: 11px;
-  fill: #e45028;
+  fill: $orange;
+}
+.footer__tel-href{
+  color: $orange;
+  text-decoration: none;
 }
 .footer__right{
   text-align: right;
@@ -59,12 +58,11 @@
     vertical-align: middle;
   }
 }
-
 .footer__icons{
   vertical-align: middle;
   list-style-type: none;
   display: inline-block;
-  font-size: 0px;
+  font-size: 0;
   margin-right: 25px;
 }
 .footer__icon{
@@ -72,14 +70,13 @@
   margin-left: 19px;
   display: inline-block;
 }
-
 .footer__svg{
   fill: #5d5d5d;
   width: 20px;
   height: 20px;
   transition: fill .4s;
   &:hover{
-    fill: #fff;
+    fill: $white;
   }
 }
 

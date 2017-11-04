@@ -12,11 +12,7 @@
   align-self: right;
   margin-left:94px;
   margin-top: 112px;
-  color: #ffffff;
-  font-family: Gagalin;
-  font-size: 72px;
-  font-weight: 400;
-  line-height: 64px;
+  color: $white;
 }
 .menu__accordion{
   position: absolute;
@@ -30,13 +26,6 @@
   display: flex;
   list-style-type: none;
 }
-@each $menu in (meat,veg,diet){
-  .menu__description--#{$menu}{
-    background: url('../img/menu/#{$menu}.jpg') center center no-repeat;
-    background-size: cover;
-
-  }
-}
 .menu__description{
   height:100vh;
   width: 83px;
@@ -46,11 +35,18 @@
   align-items: center;
   text-decoration: none;
 }
+@each $menu in (meat,veg,diet){
+  .menu__description--#{$menu}{
+    background: url('../img/menu/#{$menu}.jpg') center center no-repeat;
+    background-size: cover;
+
+  }
+}
 .menu__elem-title{
   transform: rotate(-90deg);
   text-align: center;
   white-space: nowrap;
-  color: #ffffff;
+  color: $white;
   font-family: Gagalin;
   font-size: 40px;
   font-weight: 400;
@@ -62,12 +58,12 @@
   display:flex;
   background-color: #2f3234;
   opacity: 0.93;
-  color: #ffffff;
+  color: $white;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
   &--active{
-    background-color: #2f3234;
+    background-color: $dark;
     opacity: 0.93;
     width: 544px;
     height: 100vh;

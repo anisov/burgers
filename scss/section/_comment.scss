@@ -32,7 +32,7 @@
   position: absolute;
   top: 15%;
   left: -9999px;
-  color: #ffffff;
+  color: $white;
   font-family: Gagalin;
   font-size: 14px;
   font-weight: 400;
@@ -49,13 +49,6 @@
   font-weight: 300;
   line-height: 24px;
 }
-/*
-.comment__post:hover .comment__name .comment__text {
-  transition: opacity .5s;
-  opacity: 0.95;
-  left: 10%;
-}
-*/
 .comment__post:hover .comment__bg-dark{
   transition: background-color .5s;
   position: absolute;
@@ -72,7 +65,7 @@
   height: 38px;
   background-color: $dark;
   transition: background-color .5s;
-  color: #ffffff;
+  color: $white;
   font-size: 13px;
   font-weight: 500;
   line-height: 30px;

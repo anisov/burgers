@@ -8,8 +8,11 @@
   align-items: baseline;
   margin-top: rem(79px);
 }
-.form__block:last-child{
-  margin-right: rem(-23px);
+.form__block{
+  flex:1;
+  &:last-child {
+    margin-right: rem(-23px);
+  }
 }
 .form__row{
   display: flex;
@@ -45,7 +48,6 @@
   background-color: $white;
   border-radius: rem(6px);
   &--comment{
-    width: rem(463px);
     height: rem(108px);
     border: rem(1px) solid #d1cfcb;
     background-color: $white;

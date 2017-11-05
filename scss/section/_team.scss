@@ -15,20 +15,40 @@
   min-height: 100vh;
   background-color: $dark;
   opacity: 0.93;
+  @include tablets{
+    width: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 0;
+  }
 
 }
 .team__title{
   margin-top:rem(200px);
+  margin-left: rem(7px);
   width: rem(208px);
   color: $yellow;
   margin-bottom: rem(79px);
+  flex-direction: column ;
+  @include tablets{
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .team__accordion{
   display: flex;
   flex-direction: column ;
+  @include tablets{
+    align-items: center;
+  }
 }
 .team__member{
-  margin-bottom: rem(40px);
+  margin-bottom: rem(10px);
+  @include tablets{
+    text-align: center;
+  }
 }
 .team__information{
   height: 0;
@@ -38,6 +58,16 @@
   &--active{
     height: inherit;
     overflow: visible;
+    margin-bottom: rem(30px);
+  }
+  @include tablets{
+    flex-direction: column;
+  }
+}
+.team__img{
+  margin-left: rem(23px);
+  @include tablets{
+    margin-left:0;
   }
 }
 .team__img-member {
@@ -48,6 +78,9 @@
 }
 .team__description{
   margin-left: rem(4px);
+  @include tablets{
+    margin-left: 0;
+  }
 }
 .team__name{
   align-self: flex-end;
@@ -71,9 +104,17 @@
     color: $yellow;
   }
   &.team__name--active:before{
-   transform: rotate(-180deg);
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(7px) solid $yellow;
+    border-top: rem(7px) solid transparent;
+   //transform: rotate(-180deg);
+  }
+  @include tablets{
+    font-size: rem(24px);
   }
 }
+.team
 .team__position{
   margin-top: rem(-5px);
   width: rem(208px);
@@ -81,14 +122,22 @@
   font-size: rem(14px);
   line-height: rem(24px);
   font-weight: 700;
-  margin-left: rem(18px);
+  margin-left: rem(15px);
+  @include tablets{
+    margin-left: 0;
+    width: 100%;
+  }
 }
 .team__work{
-  margin-top: rem(11px);
+  margin-top: rem(10px);
   width: rem(208px);
   color: $white;
   font-size: rem(14px);
   font-weight: 300;
   line-height: rem(24px);
-  margin-left: rem(18px);
+  margin-left: rem(15px);
+  @include tablets{
+    width: rem(336px);
+    margin-left:0;
+  }
 }

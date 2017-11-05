@@ -25,6 +25,11 @@
   flex-direction: column;
   align-items: center;
   width: rem(283px);
+  @include tablets{
+    margin-right: rem(17px);
+    max-width:rem(230px);
+  }
+
 }
 .content__img{
   text-align: center;
@@ -57,4 +62,7 @@
   font-size: rem(14px);
   font-weight: 300;
   line-height: rem(24px);
+  @include tablets{
+    max-width:rem(230px);
+  }
 }

@@ -16,6 +16,9 @@
     opacity: 0.95;
     left: 10%;
   }
+  @include tablets{
+    width: 50%;
+  }
 }
 .comment__img{
   position: absolute;

@@ -1,4 +1,7 @@
 .header{
+  max-width: 945px;
+  width: 100%;
+  overflow: hidden;
   z-index: 1;
   position: absolute;
   top: 0;
@@ -7,7 +10,6 @@
 }
 .navigation{
   padding-top: rem(12px);
-  width: rem(945px);
   margin-left: auto;
   margin-right: auto;
   display: flex;

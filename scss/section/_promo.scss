@@ -17,35 +17,65 @@
   }
 }
 .promo__burger{
+  height: 100%;
+  width:100%;
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablets{
+    flex-direction: column;
+  }
+}
+.promo__content{
+  height: 100%;
+  width: 44%;
+  @include tablets{
+    margin-top:91px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .promo__img{
-  width: rem(414px);
-  height: rem(420px);
-  background: url("../img/promo/burger.png") center center no-repeat;
   position: relative;
+  max-width: rem(414px);
+  height: 100%;
+  background: url("../img/promo/burger.png") center center no-repeat;
+  background-size: contain;
   top: rem(-12px);
   right: rem(8px);
-
+  width: 100%;
+  @include tablets{
+    right: -1.4rem;
+    top: 1.25rem;
+  }
   &:after{
-    width: rem(486px);
-    height: rem(420px);
     content: '';
     position: absolute;
-    top: rem(-24px);
-    left: rem(-54px);
-    right: rem(66px);
+    top: rem(-45px);
+    left: rem(-38px);
+    right: 0;
     bottom: 0;
-    background: url("../img/promo/drops.svg") center center no-repeat;
+
+    /* max-width: 28.875rem; */
+    /* max-height: 19.25rem; */
+    /* width: 100%; */
+    background: url('../img/promo/drops.svg') center center no-repeat;
+    background-size: contain;
   }
 }
 .promo__text{
-  width: rem(405px);
+  width: 50%;
+  max-width: rem(405px);
   padding-top: rem(34px);
   padding-left: rem(6px);
+  @include tablets{
+    width: 100%;
+    text-align: center;
+  }
+
 }
 .promo__header{
   color: #f9b43b;

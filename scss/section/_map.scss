@@ -5,6 +5,7 @@
   background: url("../img/map/map-bg.png") center center no-repeat;
   background-size: cover;
   height: 100vh;
+  min-height: 650px;
 }
 .footer{
   position: absolute;
@@ -15,7 +16,8 @@
   width: 100%;
 }
 .footer__container{
-  width: rem(965px);
+  max-width: rem(965px);
+  width: 94%;
   margin:0 auto;
   display: flex;
   height: 100%;
@@ -64,6 +66,9 @@
   display: inline-block;
   font-size: 0;
   margin-right: rem(25px);
+  @include tablets{
+    margin-right: 31px;
+  }
 }
 .footer__icon{
   font-size: rem(16px);

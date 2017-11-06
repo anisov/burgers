@@ -65,10 +65,16 @@
   &--active{
     background-color: $dark;
     opacity: 0.93;
-    width: rem(544px);
+    width: 100%;
+    max-width: rem(544px);
     height: 100vh;
-    overflow: visible;
+    min-height: 650px;
+    overflow: hidden;
     padding:rem(63px) rem(38px) 0 rem(35px);
+    @include tablets{
+      padding:7.8% 5%  0 4.2%;
+    }
   }
 }
+
 

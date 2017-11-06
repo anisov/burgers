@@ -18,6 +18,7 @@
   }
   @include tablets{
     width: 50%;
+    height: 25vh
   }
 }
 .comment__img{
@@ -40,6 +41,13 @@
   font-size: rem(14px);
   font-weight: 400;
   line-height: rem(28px);
+  @include tablets{
+    width: 80%;
+    top: 5%;
+    text-align: center;
+    max-width: 276px;
+    min-height: 109px;
+  }
 }
 .comment__text{
   opacity: 0;
@@ -51,6 +59,13 @@
   font-size: rem(14px);
   font-weight: 300;
   line-height: rem(24px);
+  @include tablets{
+    top: 20%;
+    width: 80%;
+    text-align: center;
+    max-width: 276px;
+    min-height: 109px;
+  }
 }
 .comment__post:hover .comment__bg-dark{
   transition: background-color .5s;
@@ -63,7 +78,7 @@
   min-height: rem(325px);
 }
 .comment__button{
-  margin-top: 15% ;
+  margin-top: 5% ;
   width: rem(113px);
   height: rem(38px);
   background-color: $dark;
@@ -77,5 +92,8 @@
   border: rem(1px) solid $dark;
   &:hover {
     background-color: darken($dark, 10%);
+  }
+  @include tablets{
+    margin-top: 5% ;
   }
 }

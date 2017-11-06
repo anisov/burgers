@@ -17,6 +17,8 @@
   }
 }
 .promo__burger{
+  margin-left: 3%;
+  margin-right: 3%;
   height: 100%;
   width:100%;
   flex-grow: 1;
@@ -31,8 +33,10 @@
   height: 100%;
   width: 44%;
   @include tablets{
-    margin-top:91px;
+    height: 50%;
     width: 100%;
+    margin-top: -35px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +62,6 @@
     left: rem(-38px);
     right: 0;
     bottom: 0;
-
     /* max-width: 28.875rem; */
     /* max-height: 19.25rem; */
     /* width: 100%; */
@@ -94,7 +97,7 @@
   letter-spacing: rem(-1.63px);
 }
 .arrow-scroll{
-  position: absolute;
+  position: relative;
   bottom: rem(40px);
   left: 50%;
   transform: translate(-50%, 0);

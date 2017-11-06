@@ -1,6 +1,6 @@
 .header{
   max-width: 945px;
-  width: 100%;
+  width: 95%;
   overflow: hidden;
   z-index: 1;
   position: absolute;
@@ -40,6 +40,9 @@
   &:last-child:after{
     display: none;
   }
+  @include tablets{
+    display: none;
+  }
 }
 .navigation__link{
   display: inline-block;
@@ -51,4 +54,44 @@
 }
 .navigation__button{
   margin-top: rem(22px);
+  @include tablets{
+    margin-right: 30px;
+  }
+}
+.navigation__short-href{
+  display: none;
+  margin-top: 22px;
+  margin-right: 2px;
+  align-items: center;
+  height: 23px;
+  position: relative;
+  @include tablets{
+    display: flex;
+  }
+}
+.navigation__short-menu{
+  width: 24px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  &:after{
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
+  &:before{
+    top: 0;
+    position: absolute;
+    display: block;
+    content: '';
+    width: 24px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
 }

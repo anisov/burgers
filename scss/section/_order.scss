@@ -2,6 +2,15 @@
   background: url("../img/order/order-bg.jpg") center center no-repeat;
   background-size: cover;
 }
+.form {
+  width: 95%;
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
+}
 .form__content{
   display: flex;
   justify-content: flex-start;
@@ -14,6 +23,9 @@
     align-items: center;
     justify-content: center;
   }
+  @include phones{
+    margin-top: 0%;
+  }
 }
 .form__block{
   flex:1;
@@ -25,12 +37,19 @@
   }
   @include tablets{
     margin-left: 18px;
-    width: 69%;
+    width: 65%;
+  }
+  @include phones{
+    width: 100%;
+    margin-left: 10px;
   }
 }
 .form__row{
   display: flex;
   margin-bottom: rem(13px);
+  @include phones{
+    justify-content: center;
+  }
 }
 .form__label{
   margin-right: rem(20px);
@@ -40,6 +59,10 @@
     flex-grow: 0;
     display: flex;
     align-items: center;
+    @include phones{
+     // margin-top: 24px;
+      margin-top: 2%;
+    }
   }
   &--checkbox{
     position: relative;
@@ -49,6 +72,12 @@
     @include tablets{
       margin-top: 7px;
     }
+    @include phones{
+      margin-top: 14px;
+    }
+  }
+  @include phones{
+    margin-right: 10px;
   }
 }
 .form__title{

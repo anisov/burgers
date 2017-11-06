@@ -7,6 +7,10 @@
 }
 .best__header{
   margin-top: rem(90px);
+  @include phones{
+    margin-top: 9.5%;
+  }
+
 }
 .title-dark{
   color: $dark;
@@ -19,6 +23,16 @@
   margin-right: 3.62%;
   margin-top: rem(86px);
   margin-bottom: rem(90px);
+  @include tablets{
+    justify-content: center;
+    margin-right: 0;
+
+  }
+  @include phones{
+    flex-direction: column;
+    width: 95%;
+    margin-top: 10%;
+  }
 }
 .content__box{
   min-height: rem(255px);
@@ -30,8 +44,8 @@
   width: 33.3%;
   max-width: rem(286px);
   @include tablets{
-    margin-right: -4px;
-    margin-left: 24px;
+    margin-right: 6px;
+    margin-left: 11px;
     max-width:rem(230px);
     &:first-child{
       margin-left: 0;
@@ -40,7 +54,14 @@
   &:last-child{
     margin-right: 0;
   }
-
+  @include phones{
+    min-height: 171px;
+    margin-right: 0;
+    margin-left: 0;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .content__img{
   text-align: center;
@@ -48,13 +69,21 @@
   height: rem(89px);
   &-first{
     background: url("../img/best/meat.svg") center center no-repeat;
+
   }
   &-second{
     background: url("../img/best/hand.svg") center center no-repeat;
+
   }
   &-third{
     background: url("../img/best/natural.svg") center center no-repeat;
   }
+  @include phones{;
+    margin-top: 11px;
+  }
+}
+.content__description{
+  flex: 1;
 }
 .content__title{
   margin-top: rem(28px);
@@ -64,6 +93,13 @@
   font-size: rem(24px);
   font-weight: 500;
   letter-spacing: rem(-0.6px);
+  @include phones{
+   // margin-left: 27px;
+    margin-left: 8%;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .content__text{
   width: 100%;
@@ -76,5 +112,12 @@
   line-height: rem(24px);
   @include tablets{
     max-width:rem(230px);
+  }
+  @include phones{
+    //margin-left: 28px;
+    margin-left: 8%;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
   }
 }

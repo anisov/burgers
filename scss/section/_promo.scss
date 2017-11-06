@@ -55,6 +55,10 @@
     right: -1.4rem;
     top: 1.25rem;
   }
+  @include phones{
+    right: -17px;
+    width: 72%;
+  }
   &:after{
     content: '';
     position: absolute;
@@ -75,9 +79,14 @@
   padding-top: rem(34px);
   padding-left: rem(6px);
   @include tablets{
+    padding-left: 0;
     width: 100%;
     text-align: center;
   }
+  @include tablets{
+    padding-left:0;
+  }
+
 
 }
 .promo__header{
@@ -85,6 +94,10 @@
   font-family: 'Gagalin';
   font-size: rem(72px);
   font-weight: 500;
+  @include phones{
+    font-size: 63px;
+    line-height: 53px;
+  }
 }
 .promo__description{
   color: #ffffff;
@@ -95,6 +108,9 @@
   line-height: rem(60px);
   margin-top: rem(14px);
   letter-spacing: rem(-1.63px);
+  @include phones{
+    font-size: 54px;
+  }
 }
 .arrow-scroll{
   position: relative;

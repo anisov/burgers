@@ -68,9 +68,11 @@
   transition: opacity .5s;
   &:hover{
     opacity: 1;
+    /*
     & .burgers__info{
       display: flex;
     }
+    */
   }
   @include tablets{
     margin-left: 0;
@@ -126,6 +128,9 @@
     top: 0;
     right: 0;
   }
+}
+.burgers__info--visible{
+  display: flex;
 }
 .burgers__close{
   position: absolute;

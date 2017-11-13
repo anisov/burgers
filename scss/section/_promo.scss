@@ -58,7 +58,14 @@
   @include phones{
     right: -17px;
     width: 72%;
+    top: 7px
   }
+  @include iphone{
+    right: -17px;
+    width: 83%;
+    top: 1.25rem;
+  }
+
   &:after{
     content: '';
     position: absolute;
@@ -83,8 +90,9 @@
     width: 100%;
     text-align: center;
   }
-  @include tablets{
+  @include phones{
     padding-left:0;
+    padding-top: 0.9rem;
   }
 
 
@@ -98,6 +106,9 @@
     font-size: 63px;
     line-height: 53px;
   }
+  @include iphone{
+    font-size: 54px;
+  }
 }
 .promo__description{
   color: #ffffff;
@@ -110,6 +121,10 @@
   letter-spacing: rem(-1.63px);
   @include phones{
     font-size: 54px;
+  }
+  @include iphone{
+    font-size: 43px;
+    line-height: 2.75rem;
   }
 }
 .arrow-scroll{

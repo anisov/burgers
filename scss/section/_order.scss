@@ -2,6 +2,12 @@
   background: url("../img/order/order-bg.jpg") center center no-repeat;
   background-size: cover;
 }
+.order__title{
+  @include iphone{
+    font-size: 47px;
+    line-height: 3.2rem;
+  }
+}
 .form {
   width: 95%;
   @include tablets{

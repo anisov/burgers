@@ -19,6 +19,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .section {
@@ -57,4 +58,17 @@
   @include phones{
     font-size: 50px;
   }
+}
+.close{
+  margin-left:auto;
+  border: none;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0;
+  color: transparent;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
 }

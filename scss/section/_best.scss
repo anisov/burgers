@@ -10,7 +10,6 @@
   @include phones{
     margin-top: 9.5%;
   }
-
 }
 .title-dark{
   color: $dark;
@@ -30,7 +29,6 @@
   }
   @include phones{
     flex-direction: column;
-    width: 95%;
     margin-top: 10%;
   }
 }
@@ -55,12 +53,16 @@
     margin-right: 0;
   }
   @include phones{
+    padding-left: 2.4%;
     min-height: 171px;
     margin-right: 0;
     margin-left: 0;
     flex-direction: row;
     width: 100%;
     max-width: 100%;
+  }
+  @include iphone{
+    padding-left: 1.4%;
   }
 }
 .content__img{
@@ -100,6 +102,9 @@
     width: 100%;
     max-width: 100%;
   }
+  @include iphone{
+    font-size: 1.44rem;
+  }
 }
 .content__text{
   width: 100%;
@@ -115,9 +120,13 @@
   }
   @include phones{
     //margin-left: 28px;
-    margin-left: 8%;
+    //margin-left: 8%;
+    padding-left: 8%;
     text-align: left;
     width: 100%;
     max-width: 100%;
+  }
+  @include iphone{
+    margin-top: 0.3rem;
   }
 }

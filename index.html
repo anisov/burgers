@@ -50,7 +50,7 @@
             <aside class="aside-menu">
                 <nav class="aside-menu__nav">
                     <ul class="aside-menu__list">
-                        <li class="aside-menu__elem""><a href="#" class="aside-menu__link aside-menu__link-current"></a></li>
+                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link aside-menu__link-current"></a></li>
                         <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
                         <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
                         <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
@@ -103,6 +103,87 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="section burgers">
+            <div class="burgers__container">
+                <div class="burgers__arrow burgers__arrow--left"></div>
+                <div class="container">
+                    <div class="burgers__block">
+                        <div class="burgers__img-block">
+                            <div class="burgers__composition">
+                                <div class="burgers__composition-block">
+                                    <div class="burgers__composition-img">
+                                        <svg class="burgers__composition-svg">
+                                            <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="burgers__composition-text">Состав</div>
+                                </div>
+                                <div class="burgers__info">
+                                    <button class="close burgers__close"></button>
+                                    <div class="burgers__info-block">
+                                        <div class="burgers__info-img-block"><img class="burgers__info-img" src="img/burgers/beef.svg" alt="Говядина"></div>
+                                        <div class="burgers__info-title">Говядина</div>
+                                        <div class="burgers__info-weight">300 г</div>
+                                    </div>
+                                    <div class="burgers__info-block">
+                                        <div class="burgers__info-img-block"><img class="burgers__info-img" src="img/burgers/buns.svg" alt="Булочки"></div>
+                                        <div class="burgers__info-title">Булочки</div>
+                                        <div class="burgers__info-weight">100 г</div>
+                                    </div>
+                                    <div class="burgers__info-block">
+                                        <div class="burgers__info-img-block"><img class="burgers__info-img" src="img/burgers/salad.svg" alt="Зелень"></div>
+                                        <div class="burgers__info-title">Зелень</div>
+                                        <div class="burgers__info-weight">70 г</div>
+                                    </div>
+                                    <div class="burgers__info-block">
+                                        <div class="burgers__info-img-block"><img class="burgers__info-img" src="img/burgers/sauce.svg" alt="Соус"></div>
+                                        <div class="burgers__info-title">Соус</div>
+                                        <div class="burgers__info-weight">150 г</div>
+                                    </div>
+                                    <div class="burgers__info-block">
+                                        <div class="burgers__info-img-block"><img class="burgers__info-img" src="img/burgers/cucumber.svg" alt="Овощи"></div>
+                                        <div class="burgers__info-title">Овощи</div>
+                                        <div class="burgers__info-weight">200 г</div>
+                                    </div>
+                                    <div class="burgers__info-block">
+                                        <div class="burgers__info-img-block"><img class="burgers__info-img" src="img/burgers/cheese.svg" alt="Сыр"></div>
+                                        <div class="burgers__info-title">Сыр</div>
+                                        <div class="burgers__info-weight">80 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="burgers__kkal">
+                                <div class="burgers__kkal-img">
+                                    <svg class="burgers__kkal-svg">
+                                        <use xlink:href="img/sprite/sprite.svg#kkal"></use>
+                                    </svg>
+                                </div>
+                                <div class="burgers__kkal-number">1200</div>
+                                <div class="burgers__kkal-name">ккал</div>
+                            </div>
+                            <div class="burgers__img">
+                            </div>
+                        </div>
+                        <div class="burgers__text">
+                            <h3 class="section-title burgers__header">
+                                Dark beef burger
+                            </h3>
+                            <div class="burgers__description">
+                                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                            </div>
+                            <div class="burgers__order-info">
+                                <div class="burgers__price">
+                                    <span class="burgers__cost">500</span> рублей
+                                </div>
+                                <div class="burgers__button"><a class="order-link" href="">Заказать</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burgers__arrow burgers__arrow--right"></div>
             </div>
         </section>
     <section class="section comment">
@@ -273,7 +354,7 @@
         </section>
         <section class="section order">
             <div class="container order__content">
-                <h3 class="section-title section-title--mobile">
+                <h3 class="section-title section-title--mobile order__title">
                     Закажите доставку
                 </h3>
                 <form type='POST' action="" class="form">

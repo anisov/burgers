@@ -3,6 +3,12 @@
   right: rem(54px);
   top: rem(97px);
   z-index: 2;
+  @include phones{
+    right: rem(22px);
+  }
+  @include iphone{
+    right: rem(14px);
+  }
 }
 .aside-menu__nav{
   list-style-type:none;

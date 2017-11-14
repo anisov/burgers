@@ -124,11 +124,13 @@
     color: $yellow;
   }
   &.team__name--active:before{
+    /*
     border-left: rem(5px) solid transparent;
     border-right: rem(5px) solid transparent;
     border-bottom: rem(7px) solid $yellow;
     border-top: rem(7px) solid transparent;
-   //transform: rotate(-180deg);
+    */
+   transform: rotate(-180deg);
   }
   @include tablets{
     font-size: rem(24px);

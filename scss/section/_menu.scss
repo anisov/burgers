@@ -39,7 +39,6 @@
   .menu__description--#{$menu}{
     background: url('../img/menu/#{$menu}.jpg') center center no-repeat;
     background-size: cover;
-
   }
 }
 .menu__elem-title{
@@ -73,6 +72,15 @@
     padding:rem(63px) rem(38px) 0 rem(35px);
     @include tablets{
       padding:7.8% 5%  0 4.2%;
+    }
+    @include phones{
+      padding:7.8% 5%  0 4.2%;
+
+      line-height: 17px;
+    }
+    @include mini-phones{
+      font-size: 13px;
+      line-height: 16px;
     }
   }
 }

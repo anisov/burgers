@@ -547,6 +547,7 @@ h6 {
   flex-wrap: wrap; }
 
 .comment__post {
+  overflow: hidden;
   width: 25%;
   height: 50vh;
   position: relative; }
@@ -570,7 +571,6 @@ h6 {
 .comment__img {
   position: absolute;
   width: 100%;
-  min-height: 20.3125rem;
   height: 50vh;
   -o-object-fit: cover;
   object-fit: cover;
@@ -917,10 +917,15 @@ h6 {
   .team__name--active {
     color: #f9b43b; }
   .team__name.team__name--active:before {
-    border-left: 0.3125rem solid transparent;
-    border-right: 0.3125rem solid transparent;
-    border-bottom: 0.4375rem solid #f9b43b;
-    border-top: 0.4375rem solid transparent; }
+    /*
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(7px) solid $yellow;
+    border-top: rem(7px) solid transparent;
+    */
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
   @media screen and (max-width: 768px) {
     .team__name {
       font-size: 1.5rem;
@@ -1062,6 +1067,14 @@ h6 {
     @media screen and (max-width: 768px) {
       .menu__elem-text--active {
         padding: 7.8% 5%  0 4.2%; } }
+    @media screen and (max-width: 480px) {
+      .menu__elem-text--active {
+        padding: 7.8% 5%  0 4.2%;
+        line-height: 17px; } }
+    @media screen and (max-width: 365px) {
+      .menu__elem-text--active {
+        font-size: 13px;
+        line-height: 16px; } }
 
 .section-map {
   position: relative; }
@@ -1124,6 +1137,10 @@ h6 {
   -ms-flex: 1;
   flex: 1;
   height: 100%; }
+  .footer__col--icons {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
 
 .footer__address {
   padding-top: 0.25rem;
@@ -1328,6 +1345,7 @@ h6 {
   margin-bottom: 0.125rem; }
 
 .form__input {
+  padding-left: 20px;
   width: 100%;
   height: 2.25rem;
   border: 0.0625rem solid #d1cfcb;
@@ -1700,12 +1718,13 @@ h6 {
   background-color: #fff;
   width: 270px;
   min-height: 332px;
-  opacity: 0.7;
+  opacity: 0;
   border-radius: 6px; }
   @media screen and (max-width: 768px) {
     .burgers__info {
       width: 322px;
-      min-height: 333px; } }
+      min-height: 333px;
+      opacity: .7; } }
   @media screen and (max-width: 480px) {
     .burgers__info {
       top: 0;
@@ -1718,10 +1737,25 @@ h6 {
   display: flex; }
 
 .burgers__close {
+  display: none;
   position: absolute;
   top: 19px;
   right: 21px;
   background: url("../img/burgers/close.svg") center center no-repeat; }
+  @media screen and (max-width: 768px) {
+    .burgers__close {
+      display: block; } }
+
+.burgers__info--hover:hover {
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s; }
+  .burgers__info--hover:hover > .burgers__info {
+    opacity: 0.7;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
 
 .burgers__info-block {
   display: -webkit-box;

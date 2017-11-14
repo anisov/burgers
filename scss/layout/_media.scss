@@ -13,3 +13,8 @@
     @content;
   }
 }
+@mixin mini-phones {
+  @media screen and (max-width: $iphone){
+    @content;
+  }
+}

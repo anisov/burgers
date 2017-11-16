@@ -57,6 +57,36 @@
     justify-content: center;
   }
 }
+.burgers__img-block{
+  position: relative;
+  margin-right: 20px;
+  width: 50%;
+  @include tablets{
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 49%;
+    justify-content: flex-end;
+  }
+  @include phones{
+    margin-top: 2%;
+    height: 40%;
+    background-position-y: bottom;
+    margin-bottom: 12px;
+    justify-content: flex-start;
+  }
+}
+.burgers__special-blocks{
+  @include tablets{
+    height: 90px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
 .burgers__composition{
   z-index: 3;
   position: absolute;
@@ -75,10 +105,9 @@
     */
   }
   @include tablets{
-    margin-left: 0;
-    margin-bottom:20px;
-    top: 6.6%;
-    left: 13.5%;
+    position: relative;
+    top: 5%;
+    left: 14%;
   }
   @include phones{
     top: 0;
@@ -188,9 +217,11 @@
     opacity: 1;
   }
   @include tablets{
+    margin-left: auto;
+    position: relative;
     bottom: inherit;
     left: inherit;
-    top: 6.6%;
+    top: 5%;
     right: 12.7%;
   }
   @include phones{
@@ -226,24 +257,7 @@
   line-height: 24px;
   text-align: center;
 }
-.burgers__img-block{
-  position: relative;
-  margin-right: 20px;
-  width: 50%;
-  @include tablets{
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-    height: 50%;
-  }
-  @include phones{
-    background-position-y: bottom;
-    margin-bottom: 12px;
-    height: 39%;
-  }
-}
+
 .burgers__img{
   position: relative;
   top: 72px;
@@ -259,11 +273,12 @@
     margin: 0 auto;
     background-size: contain;
     max-height: 329px;
-    height: 100%;
+    height: calc(100% - 90px);
   }
   @include phones{
     width: 98%;
     background-position-y: bottom ;
+    height: calc(100% - 90px);
   }
 }
 .burgers__text{
@@ -314,8 +329,9 @@
   display: flex;
   justify-content: flex-start;
   @include tablets{
-    margin-top: 8%;
+    margin-top: 7%;
     justify-content: center;
+    margin-bottom: 3%;
   }
   @include phones{
     margin-top: 6%;

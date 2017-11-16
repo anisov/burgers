@@ -6,7 +6,7 @@
   @include phones{
     right: rem(22px);
   }
-  @include iphone{
+  @include mini-phones{
     right: rem(14px);
   }
 }

@@ -3,7 +3,7 @@
   background-size: cover;
 }
 .order__title{
-  @include iphone{
+  @include mini-phones{
     font-size: 47px;
     line-height: 3.2rem;
   }
@@ -195,6 +195,5 @@
   transition: color 0.5s;
   &:hover{
     color: gray;
-
   }
 }

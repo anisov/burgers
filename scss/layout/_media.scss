@@ -8,13 +8,13 @@
     @content;
   }
 }
-@mixin iphone {
-  @media screen and (max-width: $iphone){
+@mixin mini-phones {
+  @media screen and (max-width: $mini-phones){
     @content;
   }
 }
-@mixin mini-phones {
-  @media screen and (max-width: $iphone){
+@mixin iphone {
+  @media screen and (max-height: $iphone){
     @content;
   }
 }

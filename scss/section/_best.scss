@@ -61,7 +61,7 @@
     width: 100%;
     max-width: 100%;
   }
-  @include iphone{
+  @include mini-phones{
     padding-left: 1.4%;
   }
 }
@@ -75,7 +75,6 @@
   }
   &-second{
     background: url("../img/best/hand.svg") center center no-repeat;
-
   }
   &-third{
     background: url("../img/best/natural.svg") center center no-repeat;
@@ -102,7 +101,7 @@
     width: 100%;
     max-width: 100%;
   }
-  @include iphone{
+  @include mini-phones{
     font-size: 1.44rem;
   }
 }
@@ -126,7 +125,7 @@
     width: 100%;
     max-width: 100%;
   }
-  @include iphone{
+  @include mini-phones{
     margin-top: 0.3rem;
   }
 }

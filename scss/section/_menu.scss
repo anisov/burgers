@@ -21,10 +21,21 @@
   bottom: 0;
   align-self: right;
   display: flex;
+  @include phones{
+    left: 0;
+    justify-content: flex-end;
+  }
 }
 .menu__elem{
   display: flex;
   list-style-type: none;
+  @include phones{
+    &--active{
+      z-index: 2;
+      position: absolute;
+      left: 0;
+    }
+  }
 }
 .menu__description{
   height:100vh;
@@ -34,6 +45,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
 }
 @each $menu in (meat,veg,diet){
   .menu__description--#{$menu}{
@@ -71,17 +83,23 @@
     overflow: hidden;
     padding:rem(63px) rem(38px) 0 rem(35px);
     @include tablets{
+      position: relative;
       padding:7.8% 5%  0 4.2%;
-    }
-    @include phones{
-      padding:7.8% 5%  0 4.2%;
-
-      line-height: 17px;
     }
     @include mini-phones{
       font-size: 13px;
       line-height: 16px;
     }
+  }
+}
+.menu__close{
+  display: none;
+  @include phones{
+    background: url(../img/menu/close.svg) center center no-repeat;
+    display: block;
+    position: absolute;
+    top: 1.5%;
+    right: 5%;
   }
 }
 

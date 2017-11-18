@@ -862,9 +862,12 @@ h6 {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
   .team__information--active {
-    height: inherit;
+    height: 0;
     overflow: visible;
     margin-bottom: 1.875rem; }
   @media screen and (max-width: 768px) {

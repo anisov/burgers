@@ -71,8 +71,9 @@
   overflow: hidden;
   display:flex;
   flex-direction: row;
+  transition: .5s;
   &--active{
-    height: inherit;
+    height: 0;
     overflow: visible;
     margin-bottom: rem(30px);
   }

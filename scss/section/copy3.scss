@@ -16,11 +16,10 @@
 }
 .menu__accordion{
   position: absolute;
-  width: 793px;
-  max-width: 100%;
   right: 0;
   top: 0;
   bottom: 0;
+  left:0;
   display: flex;
   justify-content: flex-end;
   @include phones{
@@ -41,7 +40,6 @@
     }
   }
   &--active{
-    flex-grow:1;
     transition: .4s;
   }
 
@@ -72,10 +70,6 @@
   font-weight: 400;
 }
 .menu__elem-text{
-  position: absolute;
-  left: rem(83px);
-  top: 0;
-  bottom: 0;
   overflow: hidden;
   display:flex;
   background-color: #2f3234;
@@ -94,11 +88,7 @@
     padding:rem(63px) rem(38px) 0 rem(35px);
     transition: .7s;
     @include tablets{
-      padding:7.8% 5%  0 4.2%;
-    }
-    @include phones{
       position: relative;
-      left:0;
       padding:7.8% 5%  0 4.2%;
     }
     @include mini-phones{
@@ -108,14 +98,13 @@
   }
   &--active .menu__text{
     opacity: 1;
-    transition: opacity 1s;
-    transition-delay: .5s;
+    width: 100%;
   }
 }
 .menu__text{
   opacity: 0;
-  transition: opacity 0s;
-  transition-delay: 0s;
+  transition: opacity 1s;
+  transition-delay: .5s ;
 
 }
 .menu__close{
@@ -129,5 +118,4 @@
     z-index: 3;
   }
 }
-
 

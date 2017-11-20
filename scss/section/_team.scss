@@ -59,6 +59,7 @@
 }
 .team__member{
   margin-bottom: rem(10px);
+  cursor: pointer;
   @include tablets{
     text-align: center;
   }
@@ -67,6 +68,7 @@
   }
 }
 .team__information{
+  cursor: initial;
   height: 0;
   overflow: hidden;
   display:flex;

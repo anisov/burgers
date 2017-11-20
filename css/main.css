@@ -683,6 +683,7 @@ h6 {
   min-height: 20.3125rem; }
 
 .comment__button {
+  cursor: pointer;
   margin-top: 5%;
   width: 7.0625rem;
   height: 2.375rem;
@@ -767,6 +768,7 @@ h6 {
   line-height: 24px; }
 
 .comment__close {
+  cursor: pointer;
   position: absolute;
   top: 19px;
   right: 21px;
@@ -959,7 +961,8 @@ h6 {
       align-items: center; } }
 
 .team__member {
-  margin-bottom: 0.625rem; }
+  margin-bottom: 0.625rem;
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .team__member {
       text-align: center; } }
@@ -968,6 +971,7 @@ h6 {
       margin-bottom: 20px; } }
 
 .team__information {
+  cursor: initial;
   height: 0;
   overflow: hidden;
   display: -webkit-box;
@@ -1133,7 +1137,8 @@ h6 {
   position: relative;
   -webkit-transition: .4s;
   -o-transition: .4s;
-  transition: .4s; }
+  transition: .4s;
+  cursor: pointer; }
   @media screen and (max-width: 480px) {
     .menu__elem--active {
       z-index: 2;
@@ -1776,22 +1781,27 @@ h6 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 1014px; }
+  max-width: 1014px;
+  position: relative; }
 
 .burgers__arrow {
   width: 19px;
   height: 27px;
-  margin-top: 14%; }
+  margin-top: 14%;
+  z-index: 2; }
   .burgers__arrow--left {
     margin-left: 4px;
+    left: 0;
     background: url("../img/burgers/arrow-burger-l.svg") center center no-repeat; }
     @media screen and (max-width: 768px) {
       .burgers__arrow--left {
-        margin-left: 37px; } }
+        position: absolute;
+        margin-left: 19px; } }
     @media screen and (max-width: 480px) {
       .burgers__arrow--left {
         margin-left: 2%; } }
   .burgers__arrow--right {
+    position: absolute;
     margin-right: 4px;
     left: inherit;
     margin-left: inherit;
@@ -1799,7 +1809,7 @@ h6 {
     background: url("../img/burgers/arrow-burger-r.svg") center center no-repeat; }
     @media screen and (max-width: 768px) {
       .burgers__arrow--right {
-        margin-right: 37px; } }
+        margin-right: 19px; } }
     @media screen and (max-width: 480px) {
       .burgers__arrow--right {
         margin-right: 2%; } }
@@ -1829,7 +1839,8 @@ h6 {
   font-size: 0;
   position: relative;
   top: 0;
-  left: 0%; }
+  left: 0;
+  overflow: hidden; }
 
 .burgers__block {
   width: 100%;

@@ -1,66 +1,61 @@
 var width = window.innerWidth;
-$(function () {
-    var button = document.querySelector('.navigation__short-button');
-    var menu = document.querySelector('.hamburger');
 
-    button.addEventListener('click', function() {
+//Меню для планшетов и телефонов - секция 'Hamburger'
+$(function () {
+    const button = document.querySelector('.navigation__short-button'),
+        menu = document.querySelector('.hamburger');
+
+    button.addEventListener('click', () => {
         menu.classList.add('section--visible');
     });
 
-    var buttonClose = document.querySelector('.hamburger__close');
-    buttonClose.addEventListener('click', function() {
+    const buttonClose = document.querySelector('.hamburger__close');
+    buttonClose.addEventListener('click', () => {
         menu.classList.remove('section--visible');
     });
-    /*
-    $(window).resize(function(){
-        var width = $(window).width();
-        if(width>768){
-            var hamMenuClick = document.querySelector('.burgers__composition');
-            var menuInfo = document.querySelector('.burgers__info');
+});
 
-            hamMenuClick.addEventListener('click', function() {
-                menuInfo.classList.add('burgers__info--visible');
-            });
+//Всплывающее окно состава в секции 'Burgers'
+$(function () {
+    function changeClasses (width) {
+        const hamMenuClick = document.getElementsByClassName('burgers__composition');
 
-            var menuClose = document.querySelector('.close');
-            menuClose.addEventListener('click', function() {
+        if (width > 768) {
+            for (let i = 0; i < hamMenuClick.length; i++) {
+                const  menuInfo = document.querySelector('.burgers__info');
+
+                hamMenuClick[i].classList.add('burgers__info--hover');
                 menuInfo.classList.remove('burgers__info--visible');
-                event.stopPropagation()
-            }, true);
-        }
-    });
-    */
-    function res(width) {
-        var menuInfo = document.querySelector('.burgers__info');
-        var hamMenuClick = document.querySelector('.burgers__composition');
-        var menuClose = document.querySelector('.close');
 
-        if(width>768){
-            hamMenuClick.classList.add('burgers__info--hover');
-            menuInfo.classList.remove('burgers__info--visible');
-            hamMenuClick.addEventListener('click', function() {
-                menuInfo.classList.remove('burgers__info--visible');
-            });
+                hamMenuClick[i].addEventListener('click', () => {
+                    menuInfo.classList.remove('burgers__info--visible');
+                });
+            }
         }else{
-            hamMenuClick.classList.remove('burgers__info--hover');
-            hamMenuClick.addEventListener('click', function() {
-                menuInfo.classList.add('burgers__info--visible');
-            });
-            menuClose.addEventListener('click', function() {
-                menuInfo.classList.remove('burgers__info--visible');
-                event.stopPropagation()
-            });
+            for (let i = 0; i < hamMenuClick.length; i++) {
+                hamMenuClick[i].classList.remove('burgers__info--hover');
+                hamMenuClick[i].addEventListener('click', (e) => {
+                    const $this = e.currentTarget,
+                        menuInfo = $this.querySelector('.burgers__info'),
+                        menuClose = $this.querySelector('.close');
+
+                    menuInfo.classList.add('burgers__info--visible');
+                    menuClose.addEventListener('click', () => {
+                        menuInfo.classList.remove('burgers__info--visible');
+                        event.stopPropagation()
+                    });
+                });
+            }
         }
     }
-    res(width);
-    window.addEventListener('resize', function(e){
+    changeClasses(width);
+    window.addEventListener('resize', ()=>{
         let currentWidth = window.innerWidth;
-        res(currentWidth)
+        changeClasses(currentWidth)
     });
-})
+});
 
-
-// Аккардион для Команды
+// Аккардион для секции 'Team'
 let currentWidth = width;
 window.addEventListener('resize',()=>{
     currentWidth = window.innerWidth;
@@ -112,18 +107,7 @@ $(function () {
     })
 });
 
-//ВОПРОС
-/*
-if ( imgBlock .outerHeight() > textBlock.outerHeight()){
-    var reqHeight = imgBlock .outerHeight() + 5;
-} else {
-    var reqHeight = textBlock.outerHeight();
-}
-*/
-
-//menu accordion
-
-
+//Аккордион для секции 'Menu'
 const items = document.getElementsByClassName('js-open-menu'),
     itemsText = document.getElementsByClassName('js-open-menu-text');
 
@@ -148,7 +132,7 @@ for (let i = 0; i < items.length; i++) {
     });
 }
 
-//Всплывающее окно
+//Всплывающее окно в секции 'Comment'
 $(function () {
     $('.js-open-modal').on('click', e => {
         const $this = $(e.currentTarget),
@@ -168,18 +152,18 @@ $(function () {
             modalName.text(name);
             modalText.text(text);
         }
-        $('.js-modal-close').on('click', e => {
+        $('.js-modal-close').on('click', () => {
             modal.fadeOut("slow",0).removeClass(modalActive);
         });
     })
 });
 
-//Слайдер
+//Слайдер для секции 'Burgers'
 $(function () {
-    let moveSlide = function (container, slideNum) {
+    let moveSlide = function (container, currentItem) {
         let items = container.find('.js-move-slider'),
             activeSlide = items.filter('.burgers__item--active'),
-            reqItem = items.eq(slideNum),
+            reqItem = items.eq(currentItem),
             reqIndex = reqItem.index(),
             activeSlideClass = 'burgers__item--active',
             list = container.find('.burgers__item'),
@@ -187,8 +171,8 @@ $(function () {
         if (reqItem.length){
             list.animate({
             'left' : (-reqIndex) * 100 + '%'
-        },duration, function () {
-                activeSlide.removeClass(activeSlideClass );
+        },duration, ()=> {
+                activeSlide.removeClass(activeSlideClass);
                 reqItem.addClass(activeSlideClass)
             })
         }
@@ -208,15 +192,22 @@ $(function () {
             nextItem =  activeSlide.prev();
             edgeItem = slide.last()
         }
-        let curentItem = (nextItem.length)
+        let currentItem = (nextItem.length)
             ?nextItem.index()
             :edgeItem.index();
-        moveSlide(container, curentItem)
+        moveSlide(container, currentItem)
     })
 });
 
 
-
+//ВОПРОС
+/*
+if ( imgBlock .outerHeight() > textBlock.outerHeight()){
+    var reqHeight = imgBlock .outerHeight() + 5;
+} else {
+    var reqHeight = textBlock.outerHeight();
+}
+*/
 /*
 Забагованная версия всплывающего окна
 $(function () {

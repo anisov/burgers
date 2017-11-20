@@ -11,32 +11,43 @@
   justify-content: center;
   align-items: center;
   max-width:1014px;
+  position: relative;
 }
 .burgers__arrow{
   width: 19px;
   height: 27px;
   margin-top: 14%;
+  z-index: 2;
   &--left{
     margin-left: 4px;
+    left: 0;
     background: url("../img/burgers/arrow-burger-l.svg") center center no-repeat;
     @include tablets{
-      margin-left: 37px;
+      position: absolute;
+      //margin-left: 37px;
+      margin-left: 19px;
+
     }
     @include phones{
       margin-left: 2%;
     }
   }
   &--right{
+    position: absolute;
     margin-right: 4px;
     left: inherit;
     margin-left: inherit;
     right: 0;
     background: url("../img/burgers/arrow-burger-r.svg") center center no-repeat;
     @include tablets{
-      margin-right: 37px;
+      //margin-right: 37px;
+      margin-right: 19px;
+
     }
     @include phones{
       margin-right: 2%;
+
+
     }
   }
   @include tablets{
@@ -65,7 +76,8 @@
   font-size: 0;
   position: relative;
   top: 0;
-  left: 0%;
+  left: 0;
+  overflow: hidden;
 }
 .burgers__block{
   width:100%;

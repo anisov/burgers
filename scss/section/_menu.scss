@@ -33,6 +33,7 @@
   list-style-type: none;
   position: relative;
   transition: .4s;
+  cursor: pointer;
   @include phones{
     &--active{
       z-index: 2;

@@ -46,6 +46,27 @@
     margin-top: 18%;
   }
 }
+.burgers__list{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.burgers__item{
+  white-space: initial;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  top: 0;
+  left: 0%;
+}
 .burgers__block{
   width:100%;
   display: flex;

@@ -96,7 +96,7 @@ $(function () {
             removeClasses();
             changeHeight(allContent, 0);
 
-            let reqHeight =(currentWidth > 768)
+            let reqHeight  = (currentWidth > 768)
                 ?(imgBlockHeight > textBlockHeight)
                     ?imgBlockHeight + 5
                     :textBlockHeight
@@ -123,6 +123,7 @@ if ( imgBlock .outerHeight() > textBlock.outerHeight()){
 
 //menu accordion
 
+
 const items = document.getElementsByClassName('js-open-menu'),
     itemsText = document.getElementsByClassName('js-open-menu-text');
 
@@ -133,10 +134,10 @@ for (let i = 0; i < items.length; i++) {
             activeItem = 'menu__elem--active',
             activeText = 'menu__elem-text--active';
 
-        if (item.classList.contains(activeItem)){
+        if (item.classList.contains(activeItem)) {
             item.classList.remove(activeItem);
             itemText.classList.remove(activeText);
-        } else{
+        } else {
             for (let j = 0; j < itemsText.length; j++) {
                 items[j].classList.remove(activeItem);
                 itemsText[j].classList.remove(activeText);
@@ -144,14 +145,106 @@ for (let i = 0; i < items.length; i++) {
             item.classList.add(activeItem);
             itemText.classList.add(activeText);
         }
-
     });
-
 }
 
+//Всплывающее окно
+$(function () {
+    $('.js-open-modal').on('click', e => {
+        const $this = $(e.currentTarget),
+            container = $this.closest('.js-take-container'),
+            nameElement = $('.js-take-name', container),
+            name = nameElement.text(),
+            textElement = $('.js-take-text', container),
+            text = textElement.text();
+
+        let modal = $('.js-show-modal', document),
+            modalName = $('.js-put-name', modal),
+            modalText = $('.js-put-text', modal),
+            modalActive = 'comment__modal--active';
+
+        if (!modal.hasClass(modalActive)){
+            modal.slideDown().addClass(modalActive);
+            modalName.text(name);
+            modalText.text(text);
+        }
+        $('.js-modal-close').on('click', e => {
+            modal.fadeOut("slow",0).removeClass(modalActive);
+        });
+    })
+});
+
+//Слайдер
+$(function () {
+    let moveSlide = function (container, slideNum) {
+        let items = container.find('.js-move-slider'),
+            activeSlide = items.filter('.burgers__item--active'),
+            reqItem = items.eq(slideNum),
+            reqIndex = reqItem.index(),
+            activeSlideClass = 'burgers__item--active',
+            list = container.find('.burgers__item'),
+            duration = 800;
+        if (reqItem.length){
+            list.animate({
+            'left' : (-reqIndex) * 100 + '%'
+        },duration, function () {
+                activeSlide.removeClass(activeSlideClass );
+                reqItem.addClass(activeSlideClass)
+            })
+        }
+    };
+    $('.js-move').on('click', e=>{
+        let $this = $(e.currentTarget),
+            container = $this.closest('.js-find-sliderContainer'),
+            slide = $('.js-move-slider', container),
+            activeSlide = $('.burgers__item--active', container),
+            nextItem, edgeItem;
+
+        if ($this.hasClass('js-move-right')){
+            nextItem =  activeSlide.next();
+            edgeItem = slide.first();
+        }
+        if ($this.hasClass('js-move-left')){
+            nextItem =  activeSlide.prev();
+            edgeItem = slide.last()
+        }
+        let curentItem = (nextItem.length)
+            ?nextItem.index()
+            :edgeItem.index();
+        moveSlide(container, curentItem)
+    })
+});
 
 
 
+/*
+Забагованная версия всплывающего окна
+$(function () {
+    $('.js-open-modal').on('click', e => {
+        const $this = $(e.currentTarget),
+            container = $this.closest('.js-take-container'),
+            nameElement = $('.js-take-name', container),
+            name = nameElement.text(),
+            textElement = $('.js-take-text', container),
+            text = textElement.text();
+
+        let modal = $('.js-show-modal', document),
+            modalName = $('.js-put-name', modal),
+            modalText = $('.js-put-text', modal),
+            modalActive = 'comment__modal--active';
+
+        if (!modal.hasClass(modalActive)){
+            modal.fadeTo(0, 0.9).addClass(modalActive);
+            modalName.text(name);
+            modalText.text(text);
+        }
+        $('.js-modal-close').on('click', e => {
+            modal.fadeToggle("slow",e=>{
+            }).removeClass(modalActive);
+        });
+    })
+});
+ */
 
 // вопрос     //itemsText = items.getElementsByClassName('js-open-menu-text');
 /*
@@ -170,8 +263,6 @@ for (let i = 0; i < items.length; i++) {
             }
         })
     }
-
-
         const container = document.getElementById('js-menu-listen-click');
     container.addEventListener('click', e => {
         let item = e.cu.firstChild(),

@@ -13,6 +13,30 @@ $(function () {
     buttonClose.addEventListener('click', () => {
         menu.classList.remove('section--visible');
     });
+
+    const display = $('.maincontent'),
+        sections = $('.section', display);
+
+    function changeActiveSection (sectionEq){
+        const position = (sectionEq * -100) + '%';
+
+        display.css({
+            'transform': `translateY(${position})`,
+            '-webkit-transform': `translateY(${position})`,
+        });
+
+        sections.eq(sectionEq).addClass('section--active')
+            .siblings().removeClass('section--active');
+
+        menu.classList.remove('section--visible');
+    }
+
+    $('[data-scroll-to]').on('click touchstart', e=>{
+        const $this = $(e.currentTarget),
+            sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+        changeActiveSection (sectionIndex)
+    })
 });
 
 //Всплывающее окно состава в секции 'Burgers'

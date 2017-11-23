@@ -79,5 +79,7 @@
 }
 
 .section--visible{
-  display: block!important;
+  transition: transform 0.6s;
+  transform: scale(1)!important;
+  opacity: 0.98!important;
 }

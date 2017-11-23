@@ -3,15 +3,16 @@ var width = window.innerWidth;
 //Меню для планшетов и телефонов - секция 'Hamburger'
 $(function () {
     const button = document.querySelector('.navigation__short-button'),
-        menu = document.querySelector('.hamburger');
+        menu = $('.hamburger');
+        //menu = document.querySelector('.hamburger');
 
     button.addEventListener('click', () => {
-        menu.classList.add('section--visible');
+        menu.fadeIn().addClass('section--visible');
     });
 
     const buttonClose = document.querySelector('.hamburger__close');
     buttonClose.addEventListener('click', () => {
-        menu.classList.remove('section--visible');
+        menu.fadeOut().removeClass('section--visible');
     });
 
     const display = $('.maincontent'),
@@ -28,7 +29,7 @@ $(function () {
         sections.eq(sectionEq).addClass('section--active')
             .siblings().removeClass('section--active');
 
-        menu.classList.remove('section--visible');
+        menu.fadeOut().removeClass('section--visible');
     }
 
     $('[data-scroll-to]').on('click touchstart', e=>{

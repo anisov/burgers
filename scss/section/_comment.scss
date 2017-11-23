@@ -1,6 +1,7 @@
 .comment{
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 .comment__post{
   overflow: hidden;
@@ -34,6 +35,7 @@
 }
 .comment__info{
   @include tablets{
+    padding: 2%;
     position: absolute;
     display:  flex;
     justify-content: center;
@@ -80,6 +82,7 @@
   font-weight: 300;
   line-height: rem(24px);
   @include tablets{
+    height: 90%;
     width: 100%;
     padding:0 2%;
     position: static;
@@ -88,6 +91,9 @@
   }
 }
 .comment__text{
+  @include tablets {
+    height: 59%;
+  }
   @include phones{
     display: none;
   }
@@ -133,7 +139,7 @@
   z-index: 4;
   background-color: $dark;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;

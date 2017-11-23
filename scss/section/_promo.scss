@@ -94,8 +94,6 @@
     padding-left:0;
     padding-top: 0.9rem;
   }
-
-
 }
 .promo__header{
   color: #f9b43b;
@@ -128,6 +126,7 @@
   }
 }
 .arrow-scroll{
+  z-index:5;
   position: relative;
   bottom: rem(40px);
   left: 50%;

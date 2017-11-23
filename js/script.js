@@ -40,9 +40,9 @@ $(function () {
                         menuClose = $this.querySelector('.close');
 
                     menuInfo.classList.add('burgers__info--visible');
-                    menuClose.addEventListener('click', () => {
+                    menuClose.addEventListener('click', (e) => {
                         menuInfo.classList.remove('burgers__info--visible');
-                        event.stopPropagation()
+                        e.stopPropagation()
                     });
                 });
             }
@@ -168,6 +168,7 @@ $(function () {
             activeSlideClass = 'burgers__item--active',
             list = container.find('.burgers__item'),
             duration = 800;
+
         if (reqItem.length){
             list.animate({
             'left' : (-reqIndex) * 100 + '%'
@@ -198,6 +199,40 @@ $(function () {
         moveSlide(container, currentItem)
     })
 });
+
+// Автоматическое скрытие части текста и изменение его отображаемой высоты в секции 'Comment'
+// Доработать
+$(function() {
+    let comment =  $('.comment__text');
+    let Width = window.innerWidth;
+    function changeHeightTextComment(currentWidth) {
+        if (currentWidth < 768) {
+            comment.textTailor({
+                minFont: 16,
+                maxFont: 9999,
+                preWrapText: false,
+                lineHeight: 1.45,
+                resizable: true,
+                debounce: false,
+                fit: true,
+                ellipsis: true,
+                center: false,
+                justify: false
+            });
+        } else {
+            comment.attr('style', '');
+        }
+    }
+    changeHeightTextComment(Width);
+    window.addEventListener('resize', ()=>{
+        currentWidth = window.innerWidth;
+        changeHeightTextComment(currentWidth)
+
+    });
+});
+
+
+
 
 
 //ВОПРОС

@@ -12,41 +12,55 @@
 </head>
 <body>
 <div class="wrapper">
+    <div class="section hamburger">
+        <div class="hamburger__container">
+            <div class="hamburger__head">
+                <div class="hamburger__icon"><div class="logo"><img class="logo__img" src="img/logo/logo.svg" alt="Логотип"></div></div>
+                <button class="hamburger__close"><img src="img/hamburger/close.svg" alt="Закрыть"></button>
+            </div>
+            <ul class="hamburger__menu">
+                <li class="hamburger__elem"><a href="" class="hamburger__link">Почему мы</a></li>
+                <li class="hamburger__elem"><a href="" class="hamburger__link">Меню</a></li>
+                <li class="hamburger__elem"><a href="" class="hamburger__link">Советы</a></li>
+                <li class="hamburger__elem"><a href="" class="hamburger__link">Кто мы</a></li>
+                <li class="hamburger__elem"><a href="" class="hamburger__link">Свяжитесь с нами</a></li>
+                <li class="hamburger__elem"><a href="" class="hamburger__link">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <aside class="aside-menu">
+        <nav class="aside-menu__nav">
+            <ul class="aside-menu__list">
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='0'  class="aside-menu__link aside-menu__link-current"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='1'  class="aside-menu__link"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='2' class="aside-menu__link"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='3' class="aside-menu__link"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='4' class="aside-menu__link"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='5' class="aside-menu__link"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='6' class="aside-menu__link"></a></li>
+                <li class="aside-menu__elem"><a href="#" data-scroll-to='7' class="aside-menu__link"></a></li>
+            </ul>
+        </nav>
+    </aside>
     <main class="maincontent">
         <header class="header">
             <nav class="navigation">
                 <div class="navigation__logo"><div class="logo"><img class="logo__img" src="img/logo/logo.svg" alt="Логотип"></div></div>
                 <div class="navigation__block">
                     <ul class="navigation__list">
-                        <li class="navigation__elem"><a href="" class="navigation__link">О нас</a></li>
-                        <li class="navigation__elem"><a href="" class="navigation__link">Бургеры</a></li>
-                        <li class="navigation__elem"><a href="" class="navigation__link">Команда</a></li>
-                        <li class="navigation__elem"><a href="" class="navigation__link">Меню</a></li>
-                        <li class="navigation__elem"><a href="" class="navigation__link">Отзывы</a></li>
-                        <li class="navigation__elem"><a href="" class="navigation__link">Контакты</a></li>
+                        <li class="navigation__elem"><a href="#" data-scroll-to='1' class="navigation__link">О нас</a></li>
+                        <li class="navigation__elem"><a href="#" data-scroll-to='2' class="navigation__link">Бургеры</a></li>
+                        <li class="navigation__elem"><a href="#" data-scroll-to='3' class="navigation__link">Команда</a></li>
+                        <li class="navigation__elem"><a href="#" data-scroll-to='4' class="navigation__link">Меню</a></li>
+                        <li class="navigation__elem"><a href="#" data-scroll-to='5' class="navigation__link">Отзывы</a></li>
+                        <li class="navigation__elem"><a href="#" data-scroll-to='7' class="navigation__link">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="navigation__button"><a class="order-link" href="">Заказать</a></div>
+                <div class="navigation__button"><a class="order-link" data-scroll-to='6' href="#">Заказать</a></div>
                 <div class="navigation__short-button"><div class="navigation__short-menu"></div></div>
             </nav>
         </header>
-        <section class="section hamburger">
-            <div class="hamburger__container">
-                <div class="hamburger__head">
-                    <div class="hamburger__icon"><div class="logo"><img class="logo__img" src="img/logo/logo.svg" alt="Логотип"></div></div>
-                    <button class="hamburger__close"><img src="img/hamburger/close.svg" alt="Закрыть"></button>
-                </div>
-                <ul class="hamburger__menu">
-                    <li class="hamburger__elem"><a href="" class="hamburger__link">Почему мы</a></li>
-                    <li class="hamburger__elem"><a href="" class="hamburger__link">Меню</a></li>
-                    <li class="hamburger__elem"><a href="" class="hamburger__link">Советы</a></li>
-                    <li class="hamburger__elem"><a href="" class="hamburger__link">Кто мы</a></li>
-                    <li class="hamburger__elem"><a href="" class="hamburger__link">Свяжитесь с нами</a></li>
-                    <li class="hamburger__elem"><a href="" class="hamburger__link">Контакты</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="section promo">
+        <section class="section promo section--active">
             <div class="container">
                 <div class="promo__burger">
                     <div class="promo__content">
@@ -62,22 +76,8 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow-scroll"><a href="" class="arrow-scroll__img"></a></div>
+            <div class="arrow-scroll"><a href="#" data-scroll-to='1' class="arrow-scroll__img"></a></div>
         </section>
-            <aside class="aside-menu">
-                <nav class="aside-menu__nav">
-                    <ul class="aside-menu__list">
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link aside-menu__link-current"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                        <li class="aside-menu__elem"><a href="#" class="aside-menu__link"></a></li>
-                    </ul>
-                </nav>
-            </aside>
         <section class="section best">
             <div class="container">
                 <div class="best__header">
@@ -611,7 +611,7 @@
                 </ul>
             </div>
         </section>
-    <section class="section comment">
+        <section class="section comment">
         <div class="comment__post">
             <div class="comment__bg">
                 <img class="comment__img" src="img/comment/photo1-min.jpg" alt="Фотография">
@@ -620,7 +620,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">1) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                     Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -635,7 +635,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">2) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -650,7 +650,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">3) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -665,7 +665,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">4) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -680,7 +680,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">5) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -695,7 +695,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">6) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -710,7 +710,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">7Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">7) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -725,7 +725,7 @@
             <div class="comment__info js-take-container">
                 <div class="comment__name js-take-name">Константин Спилберг</div>
                 <div class="comment__description">
-                    <div class="comment__text js-take-text">8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                    <div class="comment__text js-take-text">8) Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
                         Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                     </div>
                     <button class="comment__button js-open-modal">Подробнее</button>
@@ -827,7 +827,7 @@
                 </form>
             </div>
         </section>
-        <div class="section section-map">
+        <section class="section section-map">
             <div class="map"></div>
             <footer class="footer">
                 <div class="footer__container">
@@ -876,9 +876,13 @@
                     </div>
                 </div>
             </footer>
-        </div>
+        </section>
     </main>
-    <script src="js/script.js"></script>
 </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/jquery.texttailor.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/own-ops.js"></script>
 </body>
 </html>

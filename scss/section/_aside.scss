@@ -3,6 +3,9 @@
   right: rem(54px);
   top: rem(97px);
   z-index: 2;
+  @include tablets{
+    right:2.375rem;
+  }
   @include phones{
     right: rem(22px);
   }

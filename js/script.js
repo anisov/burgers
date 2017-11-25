@@ -256,9 +256,95 @@ $(function() {
     });
 });
 
+//Api яндекс карт
+$(function() {
+let placemarks = [
+    {
+        latitude:59.97383383,
+        longitude: 30.31150813,
+        hintContent: '<div class = "map__hint">Уфимская ул., дом 13а</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/map/map-marker.svg" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: Уфимская улица, дом 13а',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 59.90159372,
+        longitude: 30.48641351,
+        hintContent: '<div class="map__hint">Проспект Большивиков, д. 11</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/map/map-marker.svg" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: Проспект Большивиков, д. 11',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 59.94521420,
+        longitude: 30.38073549,
+        hintContent: '<div class="map__hint">Калужский переулок, д. 9</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/map/map-marker.svg" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: Калужский переулок, д. 9',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 59.85853211,
+        longitude: 30.32781840,
+        hintContent: '<div class="map__hint">ул. Гастелло д. 22</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/map/map-marker.svg" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: ул. Гастелло д. 22',
+            '</div>'
+        ]
+    }
+];
+let geoObjects = [];
 
+ymaps.ready(init);
 
+function init() {
+    let map = new ymaps.Map('map', {
+        center: [59.94, 30.32],
+        zoom: 11,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
 
+    for (let i = 0; i < placemarks.length; i++) {
+        geoObjects[i] = new ymaps.Placemark([ placemarks[i].latitude,  placemarks[i].longitude],
+            {
+                hintContent:  placemarks[i].hintContent,
+                balloonContent:  placemarks[i].balloonContent.join('')
+            },
+            {
+                iconLayout: 'default#image',
+                iconImageHref:   'img/map/map-marker.svg',
+                iconImageSize: [46, 47],
+                iconImageOffset: [-23,- 57]
+            }
+        );
+    }
+
+    let clusterer = new ymaps.Clusterer({
+        clusterIcons: [
+            {
+                href: 'img/map/map-marker.svg',
+                size: [80,80],
+                offset: [-40, -80]
+            }
+        ],
+        clusterIconContentLayout:null,
+    });
+    map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+}
+});
 
 //ВОПРОС
 /*

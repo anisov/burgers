@@ -1328,8 +1328,6 @@ h6 {
   position: relative; }
 
 .map {
-  background: url("../img/map/map-bg.png") center center no-repeat;
-  background-size: cover;
   height: 100vh;
   min-height: 650px; }
 
@@ -1923,7 +1921,8 @@ h6 {
   list-style: none;
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 0; }
 
 .burgers__item {
   white-space: initial;

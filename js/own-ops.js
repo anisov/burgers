@@ -138,7 +138,6 @@ $(function () {
             zeroingStyles();
             function scrollAsideMenu(sectionEq) {
                 const position = (sectionEq * -568) + 'px';
-
                 if (!menu.hasClass('section--visible')) {
                     display.css({
                         'transform': `translateY(0)`,

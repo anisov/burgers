@@ -23,3 +23,8 @@
     @content;
   }
 }
+@mixin iphoneHoriz {
+  @media screen and (max-height: $iphoneHoriz){
+    @content;
+  }
+}

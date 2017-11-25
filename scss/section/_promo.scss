@@ -90,10 +90,14 @@
     width: 100%;
     text-align: center;
   }
+  @include mini-tablets{
+    padding-top: rem(8px);
+  }
   @include phones{
     padding-left:0;
     padding-top: 0.9rem;
   }
+
 }
 .promo__header{
   color: #f9b43b;
@@ -117,6 +121,9 @@
   line-height: rem(60px);
   margin-top: rem(14px);
   letter-spacing: rem(-1.63px);
+  @include mini-tablets{
+    margin-top: 4px;
+  }
   @include phones{
     font-size: 54px;
   }

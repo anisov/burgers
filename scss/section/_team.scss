@@ -49,6 +49,10 @@
   @include phones{
     margin-top: 20%;
   }
+  @include iphone{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
 }
 .team__accordion{
   display: flex;

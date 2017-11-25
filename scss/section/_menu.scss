@@ -55,6 +55,9 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  @include mini-phones{
+    min-height: 568px;
+  }
 
 }
 @each $menu in (meat,veg,diet){
@@ -86,6 +89,7 @@
   line-height: rem(24px);
   opacity: 0;
   transition: .4s;
+
   &--active{
     background-color: $dark;
     opacity: 0.93;
@@ -103,8 +107,9 @@
       padding:7.8% 5%  0 4.2%;
     }
     @include mini-phones{
+      min-height: 568px;
       font-size: 13px;
-      line-height: 16px;
+      line-height: rem(20px);
     }
   }
   &--active .menu__text{

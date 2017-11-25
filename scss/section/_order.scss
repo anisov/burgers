@@ -3,9 +3,15 @@
   background-size: cover;
 }
 .order__title{
+  @include mini-tablets{
+    font-size: 3.2rem;
+  }
   @include mini-phones{
     font-size: 47px;
     line-height: 3.2rem;
+  }
+  @include iphone{
+    font-size: 33px;
   }
 }
 .form {
@@ -29,8 +35,14 @@
     align-items: center;
     justify-content: center;
   }
+  @include mini-tablets{
+    margin-top: 3%;
+  }
   @include phones{
-    margin-top: 0%;
+    margin-top: 0;
+  }
+  @include iphone{
+    margin-top: 0;
   }
 }
 .form__block{
@@ -163,6 +175,9 @@
   margin-top: rem(5px);
   @include tablets{
     margin-top: 19px;
+  }
+  @include iphone{
+    margin-top: 0;
   }
 }
 .order-button{

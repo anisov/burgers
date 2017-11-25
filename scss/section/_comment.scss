@@ -97,6 +97,9 @@
   @include phones{
     display: none;
   }
+  @include mini-tablets{
+    display: none;
+  }
 }
 .comment__post:hover .comment__bg-dark{
   transition: background-color .5s;

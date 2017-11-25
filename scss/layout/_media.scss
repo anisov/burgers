@@ -3,6 +3,11 @@
       @content;
     }
 }
+@mixin mini-tablets {
+  @media (max-width: $tablets) and (max-height: $tabletsHeight){
+    @content;
+  }
+}
 @mixin phones {
   @media screen and (max-width: $phones){
     @content;
@@ -14,7 +19,7 @@
   }
 }
 @mixin iphone {
-  @media screen and (max-height: $iphone){
+  @media (max-width: $phones) and (max-height: $iphoneHeight){
     @content;
   }
 }

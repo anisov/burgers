@@ -118,6 +118,7 @@
   margin-bottom: rem(11px);
   margin-left: rem(6px);
   &:before{
+    transition: .6s;
     margin-right: rem(10px);
     content: '';
     display: inline-block;
@@ -130,13 +131,8 @@
     color: $yellow;
   }
   &.team__name--active:before{
-    /*
-    border-left: rem(5px) solid transparent;
-    border-right: rem(5px) solid transparent;
-    border-bottom: rem(7px) solid $yellow;
-    border-top: rem(7px) solid transparent;
-    */
-   transform: rotate(-180deg);
+    transition: .6s;
+    transform: rotate(-180deg);
   }
   @include tablets{
     font-size: rem(24px);

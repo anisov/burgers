@@ -119,6 +119,7 @@ $(function () {
             });
             // Создаём проверку с какого устройства вошли, для того что бы на десктопе не обрабатывать
             if (isMobile) {
+                $(window).swipe("enable");
                 // Обработка свайп жестов с помощью библиотеки
                 $(window).swipe({
                     swipe: function (event, direction) {
@@ -131,19 +132,15 @@ $(function () {
                 e.preventDefault();
                 const $this = $(e.currentTarget),
                     sectionIndex = parseInt($this.attr('data-scroll-to'));
-
                 performTransition(sectionIndex);
             })
         } else if (currentHeight < 568 && !menu.hasClass('section--visible')) {
+            $(window).swipe("disable");
             // Отключение ops на телефонах чья высота экрана меньше 568px
             zeroingStyles();
 
             function scrollAsideMenu(sectionEq) {
                 if (!menu.hasClass('section--visible')) {
-                    display.css({
-                        'transform': `translateY(0)`,
-                        '-webkit-transform': `translateY(0)`,
-                    });
                     sections.eq(sectionEq).addClass('section--active')
                         .siblings().removeClass('section--active');
                     setTimeout(() => {
@@ -151,6 +148,7 @@ $(function () {
                     }, 800)
                 }
             }
+
             $('[data-scroll-to]').on('click touchstart', e => {
                 e.preventDefault();
                 const $this = $(e.currentTarget);
@@ -168,7 +166,10 @@ $(function () {
 
     window.addEventListener('resize', () => {
         // Включение/отключение ops в зависимости от разрешения
-        $('.wrapper').off(); // Удаление всех обработчиков события
+        $('.wrapper').off('wheel touchmove'); // Удаление всех обработчиков события
+        $('[data-scroll-to]').off('click touchstart');
+        $(document).off('keydown');
+
         currentHeight = window.innerHeight;
 
         callOps(currentHeight);

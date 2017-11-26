@@ -128,7 +128,7 @@ $(function () {
             }
             // Навигация и ссылки
             $('[data-scroll-to]').on('click touchstart', e => {
-                e.preventDefault()
+                e.preventDefault();
                 const $this = $(e.currentTarget),
                     sectionIndex = parseInt($this.attr('data-scroll-to'));
 
@@ -154,7 +154,7 @@ $(function () {
             $('[data-scroll-to]').on('click touchstart', e => {
                 e.preventDefault();
                 const $this = $(e.currentTarget);
-                var id  = $this.attr('href'),
+                let id  = $this.attr('href'),
                     top = $(id).offset().top;
 
                 let sectionIndex = parseInt($this.attr('data-scroll-to'));
@@ -162,8 +162,6 @@ $(function () {
                 scrollAsideMenu(sectionIndex);
             });
 
-        } else {
-            zeroingStyles();
         }
     }
     callOps(currentHeight);

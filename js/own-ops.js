@@ -128,6 +128,7 @@ $(function () {
             }
             // Навигация и ссылки
             $('[data-scroll-to]').on('click touchstart', e => {
+                e.preventDefault()
                 const $this = $(e.currentTarget),
                     sectionIndex = parseInt($this.attr('data-scroll-to'));
 
@@ -136,8 +137,8 @@ $(function () {
         } else if (currentHeight < 568 && !menu.hasClass('section--visible')) {
             // Отключение ops на телефонах чья высота экрана меньше 568px
             zeroingStyles();
+
             function scrollAsideMenu(sectionEq) {
-                const position = (sectionEq * -568) + 'px';
                 if (!menu.hasClass('section--visible')) {
                     display.css({
                         'transform': `translateY(0)`,
@@ -147,14 +148,17 @@ $(function () {
                         .siblings().removeClass('section--active');
                     setTimeout(() => {
                         switchMenuActiveClass(sectionEq);
-                    }, 1300)
-
+                    }, 800)
                 }
             }
             $('[data-scroll-to]').on('click touchstart', e => {
-                const $this = $(e.currentTarget),
-                    sectionIndex = parseInt($this.attr('data-scroll-to'));
+                e.preventDefault();
+                const $this = $(e.currentTarget);
+                var id  = $this.attr('href'),
+                    top = $(id).offset().top;
 
+                let sectionIndex = parseInt($this.attr('data-scroll-to'));
+                $('body,html').animate({scrollTop: top}, 800);
                 scrollAsideMenu(sectionIndex);
             });
 

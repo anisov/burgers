@@ -227,6 +227,7 @@ $(function () {
 
 // Автоматическое скрытие части текста и изменение его отображаемой высоты в секции 'Comment'
 // Доработать
+/*
 $(function() {
     let comment =  $('.comment__text');
     let Width = window.innerWidth;
@@ -255,7 +256,7 @@ $(function() {
 
     });
 });
-
+*/
 //Api яндекс карт
 $(function() {
 let placemarks = [

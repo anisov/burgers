@@ -140,6 +140,10 @@ $(function () {
             zeroingStyles();
 
             function scrollAsideMenu(sectionEq) {
+                display.css({
+                    'transform': `translateY(0)`,
+                    '-webkit-transform': `translateY(0)`,
+                });
                 if (!menu.hasClass('section--visible')) {
                     sections.eq(sectionEq).addClass('section--active')
                         .siblings().removeClass('section--active');
@@ -149,7 +153,7 @@ $(function () {
                 }
             }
 
-            $('[data-scroll-to]').on('click touchstart', e => {
+            $('[data-scroll-to]').on('click.one touchstart', e => {
                 e.preventDefault();
                 const $this = $(e.currentTarget);
                 let id  = $this.attr('href'),
@@ -167,7 +171,7 @@ $(function () {
     window.addEventListener('resize', () => {
         // Включение/отключение ops в зависимости от разрешения
         $('.wrapper').off('wheel touchmove'); // Удаление всех обработчиков события
-        $('[data-scroll-to]').off('click touchstart');
+        $('[data-scroll-to]').off('click.one touchstart');
         $(document).off('keydown');
 
         currentHeight = window.innerHeight;

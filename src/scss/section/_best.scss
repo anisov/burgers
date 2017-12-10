@@ -1,0 +1,142 @@
+.best{
+  width: 100%;
+  height: 100%;
+  background: url("../img/best/best-bg.png")  no-repeat;
+  background-size: cover;
+}
+.best__header{
+  @include phones{
+    margin-top: 9.5%;
+  }
+  @include iphone{
+    margin-top: 1.5%;
+  }
+}
+.title-dark{
+  color: $dark;
+}
+.content{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  padding:  1%;
+  margin-top: rem(86px);
+  @include tablets{
+    justify-content: center;
+    margin-right: 0;
+  }
+  @include mini-tablets{
+    margin-top: 2.375rem;
+  }
+  @include phones{
+    flex-direction: column;
+    margin-top: 0;
+  }
+  @include iphone{
+    margin-top: -30px;
+  }
+
+}
+.content__box{
+  min-height: rem(255px);
+  //margin-right: rem(36px);
+  margin-right: 3.83%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+  max-width: rem(286px);
+  @include tablets{
+    margin-right: 6px;
+    margin-left: 11px;
+    max-width:rem(230px);
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+  @include phones{
+    padding-left: 2.4%;
+    min-height: 171px;
+    margin-right: 0;
+    margin-left: 0;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+  }
+  @include mini-phones{
+    padding-left: 1.4%;
+  }
+}
+.content__img{
+  text-align: center;
+  width: rem(97px);
+  height: rem(89px);
+  &-first{
+    background: url("../img/best/meat.svg") center center no-repeat;
+
+  }
+  &-second{
+    background: url("../img/best/hand.svg") center center no-repeat;
+  }
+  &-third{
+    background: url("../img/best/natural.svg") center center no-repeat;
+  }
+  @include phones{;
+    margin-top: 11px;
+  }
+}
+.content__description{
+  flex: 1;
+}
+.content__title{
+  margin-top: rem(28px);
+  text-align: center;
+  color: $dark;
+  font-family: Lifehack;
+  font-size: rem(24px);
+  font-weight: 500;
+  letter-spacing: rem(-0.6px);
+  @include phones{
+       padding-left: 8%;
+       text-align: left;
+       width: 100%;
+       max-width: 100%;
+     }
+  @include mini-phones{
+    font-size: 1.44rem;
+  }
+  @include iphone(){
+    padding-left: 5%;
+  }
+}
+.content__text{
+  width: 100%;
+  max-width: rem(286px);
+  margin-top: rem(12px);
+  color: $dark;
+  text-align: center;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(24px);
+  @include tablets{
+    max-width:rem(230px);
+  }
+  @include phones{
+    //margin-left: 28px;
+    //margin-left: 8%;
+    padding-left: 8%;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+  }
+  @include mini-phones{
+    margin-top: 0.3rem;
+  }
+  @include iphone(){
+    margin-top: 0.1rem;
+    padding-left: 5%;
+  }
+}

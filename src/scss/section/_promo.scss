@@ -1,0 +1,155 @@
+.promo{
+  width: 100%;
+  height: 100%;
+  background: url("../img/promo/promo-bg.png") top no-repeat;
+  background-size: cover;
+  &::after{
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url("../img/promo/texture.png") center center no-repeat;
+    background-size: cover;
+    @include iphone{
+      min-height: 568px;
+    }
+  }
+  @include iphoneHoriz{
+    height: 100vh;;
+  }
+}
+.promo__burger{
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 100%;
+  width:100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablets{
+    flex-direction: column;
+  }
+}
+.promo__content{
+  height: 100%;
+  width: 44%;
+  @include tablets{
+    height: 50%;
+    width: 100%;
+    margin-top: -35px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.promo__img{
+  position: relative;
+  max-width: rem(414px);
+  height: 100%;
+  background: url("../img/promo/burger.png") center center no-repeat;
+  background-size: contain;
+  top: rem(-12px);
+  right: rem(8px);
+  width: 100%;
+  @include tablets{
+    right: -1.4rem;
+    top: 1.25rem;
+  }
+  @include phones{
+    right: -17px;
+    width: 72%;
+    top: 7px
+  }
+  @include mini-phones{
+    right: -17px;
+    width: 83%;
+    top: 1.25rem;
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: rem(-45px);
+    left: -4%;
+    right: 0;
+    bottom: 0;
+    /* max-width: 28.875rem; */
+    /* max-height: 19.25rem; */
+    /* width: 100%; */
+    background: url('../img/promo/drops.svg') center center no-repeat;
+    background-size: contain;
+  }
+}
+.promo__text{
+  width: 50%;
+  max-width: rem(405px);
+  padding-top: rem(34px);
+  padding-left: rem(6px);
+  @include tablets{
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  @include mini-tablets{
+    padding-top: rem(8px);
+  }
+  @include phones{
+    padding-left:0;
+    padding-top: 0.9rem;
+  }
+
+}
+.promo__header{
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: rem(72px);
+  font-weight: 500;
+  @include phones{
+    font-size: 63px;
+    line-height: 53px;
+  }
+  @include mini-phones{
+    font-size: 54px;
+  }
+}
+.promo__description{
+  color: #ffffff;
+  font-family: 'Lifehack';
+  text-transform: lowercase;
+  font-size: rem(65px);
+  font-weight: 500;
+  line-height: rem(60px);
+  margin-top: rem(14px);
+  letter-spacing: rem(-1.63px);
+  @include mini-tablets{
+    margin-top: 4px;
+  }
+  @include phones{
+    font-size: 54px;
+  }
+  @include mini-phones{
+    font-size: 43px;
+    line-height: 2.75rem;
+  }
+}
+.arrow-scroll{
+  z-index:5;
+  position: relative;
+  bottom: rem(40px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+.arrow-scroll__img{
+  height: rem(14px);
+  display: block;
+  background: url("../img/promo/arrow-scroll.svg") center center no-repeat;
+}

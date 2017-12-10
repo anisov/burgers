@@ -1,0 +1,35 @@
+@mixin tablets {
+    @media screen and (max-width: $tablets){
+      @content;
+    }
+}
+@mixin mini-tablets {
+  @media (max-width: $tablets) and (max-height: $tabletsHeight){
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phones){
+    @content;
+  }
+}
+@mixin mini-phones {
+  @media screen and (max-width: $mini-phones){
+    @content;
+  }
+}
+@mixin iphone {
+  @media (max-width: $phones) and (max-height: $iphoneHeight){
+    @content;
+  }
+}
+@mixin iphoneHoriz {
+  @media screen and (max-height: $iphoneHoriz){
+    @content;
+  }
+}
+@mixin noOps {
+  @media screen and (max-height: $iphoneHoriz){
+    @content;
+  }
+}
